@@ -247,7 +247,7 @@ export const usePredictionsContract = (address: string, tokenSymbol: string) => 
     if (address === getPredictionsV1Address()) {
       return getPredictionsV1Contract(library.getSigner())
     }
-    const getPredContract = tokenSymbol === 'FLUIDEX' ? getCakePredictionsContract : getPredictionsContract
+    const getPredContract = tokenSymbol === 'POOLEN' ? getCakePredictionsContract : getPredictionsContract
 
     return getPredContract(address, library.getSigner())
   }, [library, address, tokenSymbol])

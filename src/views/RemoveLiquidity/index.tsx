@@ -169,7 +169,7 @@ export default function RemoveLiquidity() {
       { name: 'verifyingContract', type: 'address' },
     ]
     const domain = {
-      name: 'Fluid LPs',
+      name: 'Beraborrow LPs',
       version: '1',
       chainId,
       verifyingContract: pair.liquidityToken.address,
@@ -340,9 +340,9 @@ export default function RemoveLiquidity() {
     let args: Array<string | string[] | number | boolean>
     // we have approval, use normal remove liquidity
     if (approval === ApprovalState.APPROVED) {
-      // removeLiquiditySEI
+      // removeLiquidityBERA
       if (oneCurrencyIsBNB) {
-        methodNames = ['removeLiquiditySEI', 'removeLiquiditySEISupportingFeeOnTransferTokens']
+        methodNames = ['removeLiquidityBERA', 'removeLiquidityBERASupportingFeeOnTransferTokens']
         args = [
           currencyBIsBNB ? tokenA.address : tokenB.address,
           liquidityAmount.raw.toString(),
@@ -368,9 +368,9 @@ export default function RemoveLiquidity() {
     }
     // we have a signature, use permit versions of remove liquidity
     else if (signatureData !== null) {
-      // removeLiquiditySEIWithPermit
+      // removeLiquidityBERAWithPermit
       if (oneCurrencyIsBNB) {
-        methodNames = ['removeLiquiditySEIWithPermit', 'removeLiquiditySEIWithPermitSupportingFeeOnTransferTokens']
+        methodNames = ['removeLiquidityBERAWithPermit', 'removeLiquidityBERAWithPermitSupportingFeeOnTransferTokens']
         args = [
           currencyBIsBNB ? tokenA.address : tokenB.address,
           liquidityAmount.raw.toString(),
@@ -384,7 +384,7 @@ export default function RemoveLiquidity() {
           signatureData.s,
         ]
       }
-      // removeLiquiditySEIWithPermit
+      // removeLiquidityBERAWithPermit
       else {
         methodNames = ['removeLiquidityWithPermit']
         args = [
@@ -676,10 +676,10 @@ export default function RemoveLiquidity() {
                       ) : oneCurrencyIsWBNB ? (
                         <StyledInternalLink
                           href={`/remove/${
-                            currencyA && currencyEquals(currencyA, WNATIVE[chainId]) ? 'SEI' : currencyIdA
-                          }/${currencyB && currencyEquals(currencyB, WNATIVE[chainId]) ? 'SEI' : currencyIdB}`}
+                            currencyA && currencyEquals(currencyA, WNATIVE[chainId]) ? 'BERA' : currencyIdA
+                          }/${currencyB && currencyEquals(currencyB, WNATIVE[chainId]) ? 'BERA' : currencyIdB}`}
                         >
-                          {t('Receive SEI')}
+                          {t('Receive BERA')}
                         </StyledInternalLink>
                       ) : null}
                     </RowBetween>

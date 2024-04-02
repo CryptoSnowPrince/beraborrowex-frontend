@@ -51,7 +51,7 @@ export default function useWrapCallback(
                     value: `0x${inputAmount.raw.toString(16)}`,
                   })
                   addTransaction(txReceipt, {
-                    summary: `Wrap ${inputAmount.toSignificant(6)} SEI to WBNB`,
+                    summary: `Wrap ${inputAmount.toSignificant(6)} BERA to WBNB`,
                     type: 'wrap',
                   })
                 } catch (error) {
@@ -59,7 +59,7 @@ export default function useWrapCallback(
                 }
               }
             : undefined,
-        inputError: sufficientBalance ? undefined : t('Insufficient SEI balance'),
+        inputError: sufficientBalance ? undefined : t('Insufficient BERA balance'),
       }
     }
     if (currencyEquals(WNATIVE[chainId], inputCurrency) && outputCurrency === ETHER) {
@@ -72,7 +72,7 @@ export default function useWrapCallback(
                   const txReceipt = await callWithGasPrice(wbnbContract, 'withdraw', [
                     `0x${inputAmount.raw.toString(16)}`,
                   ])
-                  addTransaction(txReceipt, { summary: `Unwrap ${inputAmount.toSignificant(6)} WBNB to SEI` })
+                  addTransaction(txReceipt, { summary: `Unwrap ${inputAmount.toSignificant(6)} WBNB to BERA` })
                 } catch (error) {
                   console.error('Could not withdraw', error)
                 }

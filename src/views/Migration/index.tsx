@@ -26,12 +26,12 @@ const MigrationPage: React.FC<React.PropsWithChildren> = () => {
     {
       stepId: ProgressStepsType.STEP1,
       canHover: true,
-      text: t('Unstake LP tokens and FLUIDEX from the old MasterChef contract.'),
+      text: t('Unstake LP tokens and POOLEN from the old MasterChef contract.'),
     },
     {
       stepId: ProgressStepsType.STEP2,
       canHover: true,
-      text: t('Stake LP tokens and FLUIDEX to the new MasterChef v2 contract.'),
+      text: t('Stake LP tokens and POOLEN to the new MasterChef v2 contract.'),
     },
   ]
 
@@ -75,7 +75,7 @@ const MigrationPage: React.FC<React.PropsWithChildren> = () => {
         <Heading scale="lg" color="text">
           {t('Migrate your stakings to the new MasterChef contract.')}
         </Heading>
-        <Link href="https://docs.pancakeswap.finance/code/migration/migrate-your-stakings" external>
+        <Link href="https://docs.beraborrowex.metabest.tech/code/migration/migrate-your-stakings" external>
           <Button p="0" variant="text">
             <Text color="primary" bold fontSize="16px" mr="4px">
               {t('Learn more')}

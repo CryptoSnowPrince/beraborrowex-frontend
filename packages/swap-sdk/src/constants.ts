@@ -7,7 +7,7 @@ export enum ChainId {
   // ETHEREUM = 1,
   // RINKEBY = 4,
   // BSC = 56,
-  BSC = 713715,
+  BSC = 80085,
   BSC_TESTNET = 97,
 }
 
@@ -22,14 +22,14 @@ export enum Rounding {
   ROUND_UP,
 }
 
-export const FACTORY_ADDRESS = '0x5AB469c5700b2D78bE03905E5169efB5B7AD0035'
+export const FACTORY_ADDRESS = '0xEe8d287B844959ADe40d718Dc23077ba920e2f07'
 
 export const FACTORY_ADDRESS_MAP = {
   [ChainId.BSC]: FACTORY_ADDRESS,
   [ChainId.BSC_TESTNET]: '0x6725f303b657a9451d8ba641348b6761a6cc7a17',
 }
 
-export const INIT_CODE_HASH = '0x2934ac2b8ae55671d83f252ba1ef2330f892d6feb11f32ca48efadd6a620f709'
+export const INIT_CODE_HASH = '0x8ab748efa333c13d8c4c024dc37a3ffe3e76efdbae6f68929bbbfb015bf06b97'
 
 export const INIT_CODE_HASH_MAP = {
   [ChainId.BSC]: INIT_CODE_HASH,

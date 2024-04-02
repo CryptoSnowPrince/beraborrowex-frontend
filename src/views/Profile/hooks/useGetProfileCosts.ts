@@ -35,7 +35,7 @@ const useGetProfileCosts = () => {
         })
         setIsLoading(false)
       } catch (error) {
-        toastError(t('Error'), t('Could not retrieve FLUIDEX costs for profile'))
+        toastError(t('Error'), t('Could not retrieve POOLEN costs for profile'))
       }
     }
 

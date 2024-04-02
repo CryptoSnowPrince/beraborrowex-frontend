@@ -129,7 +129,7 @@ const IfoCardTokens: React.FC<React.PropsWithChildren<IfoCardTokensProps>> = ({
   const { t } = useTranslation()
   const { targetRef, tooltip, tooltipVisible } = useTooltip(
     t(
-      'Sorry, you didn’t contribute enough FLUIDEX to meet the minimum threshold. You didn’t buy anything in this sale, but you can still reclaim your FLUIDEX.',
+      'Sorry, you didn’t contribute enough POOLEN to meet the minimum threshold. You didn’t buy anything in this sale, but you can still reclaim your POOLEN.',
     ),
     { placement: 'bottom' },
   )
@@ -158,8 +158,8 @@ const IfoCardTokens: React.FC<React.PropsWithChildren<IfoCardTokensProps>> = ({
           <Box>
             <MessageText display="inline">
               {publicIfoData.status === 'finished'
-                ? t('Activate Fluidex Profile to take part in next IFO‘s!')
-                : t('You need an active Fluidex Profile to take part in an IFO!')}
+                ? t('Activate Beraborrowex Profile to take part in next IFO‘s!')
+                : t('You need an active Beraborrowex Profile to take part in an IFO!')}
             </MessageText>{' '}
             <MessageTextLink href="/ifo#ifo-how-to" color="#D67E0A" display="inline">
               {t('How does it work?')} »
@@ -201,7 +201,7 @@ const IfoCardTokens: React.FC<React.PropsWithChildren<IfoCardTokensProps>> = ({
       message = (
         <Message my="24px" p="8px" variant="danger">
           <Box>
-            <MessageText display="inline">{t('You don’t have any iFLUIDEX available for IFO public sale.')}</MessageText>{' '}
+            <MessageText display="inline">{t('You don’t have any iBERABORROWEX available for IFO public sale.')}</MessageText>{' '}
             <MessageTextLink display="inline" fontWeight={700} href="/ifo#ifo-how-to" color="failure">
               {t('How does it work?')} »
             </MessageTextLink>
@@ -281,7 +281,7 @@ const IfoCardTokens: React.FC<React.PropsWithChildren<IfoCardTokensProps>> = ({
           {ifov31Msg || (
             <>
               <Text textAlign="center" fontSize="14px">
-                {t('To participate in the next IFO, lock some FLUIDEX in the fixed-term staking FLUIDEX pool!')}
+                {t('To participate in the next IFO, lock some POOLEN in the fixed-term staking POOLEN pool!')}
               </Text>
               <MessageTextLink href="/ifo#ifo-how-to" textAlign="center">
                 {t('How does it work?')} »

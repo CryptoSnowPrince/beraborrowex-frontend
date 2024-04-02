@@ -10,21 +10,21 @@ BigNumber.config({
 export const BSC_BLOCK_TIME = 3
 
 export const BASE_BSC_SCAN_URLS = {
-  [ChainId.BSC]: 'https://seitrace.com',
+  [ChainId.BSC]: 'https://artio.beratrail.io',
   [ChainId.BSC_TESTNET]: 'https://testnet.bscscan.com',
 }
 
-// FLUIDEX_PER_BLOCK details
-// 40 FLUIDEX is minted per block
-// 20 FLUIDEX per block is sent to Burn pool (A farm just for burning cake)
-// 10 FLUIDEX per block goes to FLUIDEX syrup pool
-// 9 FLUIDEX per block goes to Yield farms and lottery
-// FLUIDEX_PER_BLOCK in config/index.ts = 40 as we only change the amount sent to the burn pool which is effectively a farm.
-// FLUIDEX/Block in src/views/Home/components/CakeDataRow.tsx = 15 (40 - Amount sent to burn pool)
-export const FLUIDEX_PER_BLOCK = 40
+// BERABORROWEX_PER_BLOCK details
+// 40 POOLEN is minted per block
+// 20 POOLEN per block is sent to Burn pool (A farm just for burning cake)
+// 10 POOLEN per block goes to POOLEN syrup pool
+// 9 POOLEN per block goes to Yield farms and lottery
+// BERABORROWEX_PER_BLOCK in config/index.ts = 40 as we only change the amount sent to the burn pool which is effectively a farm.
+// POOLEN/Block in src/views/Home/components/CakeDataRow.tsx = 15 (40 - Amount sent to burn pool)
+export const BERABORROWEX_PER_BLOCK = 40
 export const BLOCKS_PER_YEAR = (60 / BSC_BLOCK_TIME) * 60 * 24 * 365 // 10512000
-export const FLUIDEX_PER_YEAR = FLUIDEX_PER_BLOCK * BLOCKS_PER_YEAR
-export const BASE_URL = 'https://pancakeswap.finance'
+export const BERABORROWEX_PER_YEAR = BERABORROWEX_PER_BLOCK * BLOCKS_PER_YEAR
+export const BASE_URL = 'https://beraborrowex.metabest.tech'
 export const BASE_ADD_LIQUIDITY_URL = `${BASE_URL}/add`
 export const BASE_BSC_SCAN_URL = BASE_BSC_SCAN_URLS[ChainId.BSC]
 export const DEFAULT_TOKEN_DECIMAL = BIG_TEN.pow(18)

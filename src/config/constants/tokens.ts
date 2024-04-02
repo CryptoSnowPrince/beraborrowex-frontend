@@ -1,21 +1,21 @@
 import { ChainId, Token, WBNB } from '@pancakeswap/sdk'
 
-const FLUIDEX_MAINNET = new Token(
+const BERABORROWEX_MAINNET = new Token(
   ChainId.BSC,
-  '0x67056f04e0B41C8350dbBb848A4909E2aF49D2f0',
+  '0x005f7bE7C9C9Ae25028fa2aBCEb729b562dd564d',
   18,
-  'FLUIDEX',
-  'FLUIDEX',
-  'https://seitrace.com/',
+  'POOLEN',
+  'POOLEN',
+  'https://beraborrow.com/',
 )
 
-const FLUIDEX_TESTNET = new Token(
+const BERABORROWEX_TESTNET = new Token(
   ChainId.BSC_TESTNET,
   '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
   18,
-  'FLUIDEX',
-  'Fluidex Token',
-  'https://pancakeswap.finance/',
+  'POOLEN',
+  'POOLEN',
+  'https://beraborrow.com/',
 )
 
 const USDC_BSC = new Token(
@@ -41,9 +41,9 @@ export const USDC = {
   [ChainId.BSC_TESTNET]: USDC_TESTNET,
 }
 
-export const FLUIDEX = {
-  [ChainId.BSC]: FLUIDEX_MAINNET,
-  [ChainId.BSC_TESTNET]: FLUIDEX_TESTNET,
+export const POOLEN = {
+  [ChainId.BSC]: BERABORROWEX_MAINNET,
+  [ChainId.BSC_TESTNET]: BERABORROWEX_TESTNET,
 }
 
 const BUSD_MAINNET = new Token(
@@ -71,10 +71,18 @@ export const BUSD: Record<ChainId, Token> = {
 
 export const bscTokens = {
   wbnb: WBNB[ChainId.BSC],
-  // bnb here points to the wbnb contract. Wherever the currency SEI is required, conditional checks for the symbol 'SEI' can be used
-  bnb: new Token(ChainId.BSC, '0x26841a0A5D958B128209F4ea9a1DD7E61558c330', 18, 'SEI', 'SEI', 'https://seitrace.com/'),
-  cake: FLUIDEX_MAINNET,
+  // bnb here points to the wbnb contract. Wherever the currency BERA is required, conditional checks for the symbol 'BERA' can be used
+  bnb: new Token(ChainId.BSC, '0x5e1100ea18F918a4e9AB70694c6c554e1E940D32', 18, 'BERA', 'BERA', 'https://artio.beratrail.io/'),
+  cake: BERABORROWEX_MAINNET,
   gmi: new Token(ChainId.BSC, '0x93D8d25E3C9A847a5Da79F79ecaC89461FEcA846', 18, 'GMI', 'Gamifi', 'https://gamifi.gg/'),
+  usdt: new Token(
+    ChainId.BSC,
+    '0x6572bee203c2906175D5AcDbd11917E06Cc1D545',
+    18,
+    'USDT',
+    'Tether USD',
+    'https://tether.to/',
+  ),
   tlos: new Token(
     ChainId.BSC,
     '0xb6C53431608E626AC81a9776ac3e999c5556717c',
@@ -135,19 +143,11 @@ export const bscTokens = {
   busd: BUSD_MAINNET,
   dai: new Token(
     ChainId.BSC,
-    '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3',
+    '0x5AB469c5700b2D78bE03905E5169efB5B7AD0035',
     18,
     'DAI',
-    'Dai Stablecoin',
-    'https://www.makerdao.com/',
-  ),
-  usdt: new Token(
-    ChainId.BSC,
-    '0x6572bee203c2906175D5AcDbd11917E06Cc1D545',
-    18,
-    'USDT',
-    'Tether USD',
-    'https://tether.to/',
+    'MockDAI',
+    'https://beraborrow.com/',
   ),
   btcb: new Token(
     ChainId.BSC,
@@ -275,7 +275,7 @@ export const bscTokens = {
     18,
     'SYRUP',
     'SyrupBar Token',
-    'https://pancakeswap.finance/',
+    'https://beraborrowex.metabest.tech/',
   ),
   pha: new Token(
     ChainId.BSC,
@@ -289,7 +289,7 @@ export const bscTokens = {
     ChainId.BSC,
     '0xdB8D30b74bf098aF214e862C90E647bbB1fcC58c',
     18,
-    'BABYFLUIDEX',
+    'BABYBERABORROWEX',
     'Baby Cake Token',
     'https://babycake.app/',
   ),
@@ -2223,7 +2223,7 @@ export const bscTokens = {
     '0xE85aFCcDaFBE7F2B096f268e31ccE3da8dA2990A',
     18,
     'aBNBc',
-    'Ankr SEI Reward Bearing Certificate',
+    'Ankr BERA Reward Bearing Certificate',
     'https://www.ankr.com/',
   ),
   ankr: new Token(
@@ -2328,7 +2328,7 @@ export const bscTokens = {
     '0xc2E9d07F66A89c44062459A47a0D2Dc038E4fb16',
     18,
     'stkBNB',
-    'Staked SEI',
+    'Staked BERA',
     'https://pstake.finance/bnb',
   ),
   pstake: new Token(
@@ -2343,7 +2343,7 @@ export const bscTokens = {
 
 export const bscTestnetTokens = {
   wbnb: WBNB[ChainId.BSC_TESTNET],
-  cake: FLUIDEX_TESTNET,
+  cake: BERABORROWEX_TESTNET,
   busd: BUSD_TESTNET,
   syrup: new Token(
     ChainId.BSC_TESTNET,
@@ -2351,7 +2351,7 @@ export const bscTestnetTokens = {
     18,
     'SYRUP',
     'SyrupBar Token',
-    'https://pancakeswap.finance/',
+    'https://beraborrowex.metabest.tech/',
   ),
   bake: new Token(
     ChainId.BSC_TESTNET,

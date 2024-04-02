@@ -65,13 +65,13 @@ function MyApp(props: AppProps) {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1, viewport-fit=cover"
         />
-        <meta name="description" content="Discover Fluidex, the leading DEX on SEI Chain (SEI) for FLUIDEX." />
+        <meta name="description" content="Discover Beraborrowex, the leading DEX on BERA Chain (BERA) for POOLEN." />
         <meta name="theme-color" content="#1FC7D4" />
-        <meta name="twitter:image" content="https://fluidex.metabest.tech/logo.png" />
-        <meta name="twitter:description" content="The most popular AMM on SEI!" />
+        <meta name="twitter:image" content="https://beraborrowex.metabest.tech/logo.png" />
+        <meta name="twitter:description" content="The most popular AMM on BERA!" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Fluidex - A next evolution DeFi exchange on SEI Chain (SEI)" />
-        <title>Fluidex</title>
+        <meta name="twitter:title" content="Beraborrowex - A next evolution DeFi exchange on BERA Chain (BERA)" />
+        <title>Beraborrowex</title>
         {(Component as NextPageWithLayout).mp && (
           // eslint-disable-next-line @next/next/no-sync-scripts
           <script src="https://public.bnbstatic.com/static/js/mp-webview-sdk/webview-v1.0.0.min.js" id="mp-webview" />

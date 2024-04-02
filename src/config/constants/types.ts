@@ -16,7 +16,7 @@ export type TranslatableText =
     }
 export interface Address {
   97?: string
-  713715: string
+  80085: string
   [chainId: number]: string
 }
 
@@ -67,7 +67,7 @@ export interface Ifo {
 export enum PoolCategory {
   'COMMUNITY' = 'Community',
   'CORE' = 'Core',
-  'BINANCE' = 'Binance', // Pools using native SEI behave differently than pools using a token
+  'BINANCE' = 'Binance', // Pools using native BERA behave differently than pools using a token
   'AUTO' = 'Auto',
 }
 

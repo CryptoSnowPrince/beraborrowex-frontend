@@ -70,9 +70,9 @@ const MigrationSticky: React.FC<React.PropsWithChildren<MigrationStickyProps>> =
   const { isMobile } = useMatchBreakpointsContext()
 
   const isStep1: boolean = step === ProgressStepsType.STEP1
-  const title: string = isStep1 ? t('Unstaking LP Tokens and FLUIDEX') : t('Stake in the new contract.')
+  const title: string = isStep1 ? t('Unstaking LP Tokens and POOLEN') : t('Stake in the new contract.')
   const subTitle: string = isStep1
-    ? t('All the earned FLUIDEX will be harvested to your wallet upon unstake.')
+    ? t('All the earned POOLEN will be harvested to your wallet upon unstake.')
     : t('Each farm and pool has to be individually enabled before staking.')
   const buttonText: string = isStep1 ? t('Go to Stake') : t('Skip')
 

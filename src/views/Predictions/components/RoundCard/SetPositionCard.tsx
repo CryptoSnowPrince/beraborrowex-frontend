@@ -37,8 +37,8 @@ import PositionTag from '../PositionTag'
 import FlexRow from '../FlexRow'
 
 const LOGOS = {
-  SEI: BinanceIcon,
-  FLUIDEX: LogoIcon,
+  BERA: BinanceIcon,
+  POOLEN: LogoIcon,
 }
 
 interface SetPositionCardProps {
@@ -77,8 +77,8 @@ const getValueAsEthersBn = (value: string) => {
 }
 
 const TOKEN_BALANCE_CONFIG = {
-  SEI: useGetBnbBalance,
-  FLUIDEX: useGetCakeBalance,
+  BERA: useGetBnbBalance,
+  POOLEN: useGetCakeBalance,
 }
 
 const SetPositionCard: React.FC<React.PropsWithChildren<SetPositionCardProps>> = ({
@@ -103,15 +103,15 @@ const SetPositionCard: React.FC<React.PropsWithChildren<SetPositionCardProps>> =
     return TOKEN_BALANCE_CONFIG[token.symbol]
   }, [token.symbol])
 
-  const { isVaultApproved, setLastUpdated } = useCakeApprovalStatus(token.symbol === 'FLUIDEX' ? predictionsAddress : null)
+  const { isVaultApproved, setLastUpdated } = useCakeApprovalStatus(token.symbol === 'POOLEN' ? predictionsAddress : null)
   const { handleApprove, pendingTx } = useCakeApprove(
     setLastUpdated,
     predictionsAddress,
     t('You can now start prediction'),
   )
 
-  // SEI prediction doesn't need approval
-  const doesCakeApprovePrediction = token.symbol === 'SEI' || isVaultApproved
+  // BERA prediction doesn't need approval
+  const doesCakeApprovePrediction = token.symbol === 'BERA' || isVaultApproved
 
   const { balance: bnbBalance } = useTokenBalance()
 
@@ -168,14 +168,14 @@ const SetPositionCard: React.FC<React.PropsWithChildren<SetPositionCardProps>> =
   const handleEnterPosition = async () => {
     const betMethod = position === BetPosition.BULL ? 'betBull' : 'betBear'
     const callOptions =
-      token.symbol === 'FLUIDEX'
+      token.symbol === 'POOLEN'
         ? {
             gasLimit: 300000,
             value: 0,
           }
         : { value: valueAsBn.toString() }
 
-    const args = token.symbol === 'FLUIDEX' ? [epoch, valueAsBn.toString()] : [epoch]
+    const args = token.symbol === 'POOLEN' ? [epoch, valueAsBn.toString()] : [epoch]
 
     const receipt = await fetchWithCatchTxError(() => {
       return callWithGasPrice(predictionsContract, betMethod, args, callOptions)

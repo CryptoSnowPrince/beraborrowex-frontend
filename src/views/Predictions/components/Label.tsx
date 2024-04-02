@@ -159,16 +159,16 @@ export const PricePairLabel: React.FC<React.PropsWithChildren> = () => {
   }, [])
 
   const onTokenSwitch = useCallback(() => {
-    if (router.query.token === PredictionSupportedSymbol.FLUIDEX) {
-      router.query.token = PredictionSupportedSymbol.SEI
-    } else if (router.query.token === undefined && token.symbol === PredictionSupportedSymbol.FLUIDEX) {
-      router.query.token = PredictionSupportedSymbol.SEI
-    } else if (router.query.token === undefined && token.symbol === PredictionSupportedSymbol.SEI) {
-      router.query.token = PredictionSupportedSymbol.FLUIDEX
+    if (router.query.token === PredictionSupportedSymbol.POOLEN) {
+      router.query.token = PredictionSupportedSymbol.BERA
+    } else if (router.query.token === undefined && token.symbol === PredictionSupportedSymbol.POOLEN) {
+      router.query.token = PredictionSupportedSymbol.BERA
+    } else if (router.query.token === undefined && token.symbol === PredictionSupportedSymbol.BERA) {
+      router.query.token = PredictionSupportedSymbol.POOLEN
     } else if (token.symbol === undefined && router.query.token === undefined) {
-      router.query.token = PredictionSupportedSymbol.SEI
+      router.query.token = PredictionSupportedSymbol.BERA
     } else {
-      router.query.token = PredictionSupportedSymbol.FLUIDEX
+      router.query.token = PredictionSupportedSymbol.POOLEN
     }
     if (!dismissTooltip) onDismissTooltip()
 
@@ -186,7 +186,7 @@ export const PricePairLabel: React.FC<React.PropsWithChildren> = () => {
           </Tooltip>
         )}
         <CoinSwitcher
-          isDefaultBnb={router.query.token === 'SEI' || (router.query.token === undefined && token.symbol === 'SEI')}
+          isDefaultBnb={router.query.token === 'BERA' || (router.query.token === undefined && token.symbol === 'BERA')}
           onTokenSwitch={onTokenSwitch}
         />
         <Label dir="left" backgroundOpacity={!dismissTooltip}>

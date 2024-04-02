@@ -111,8 +111,8 @@ export const DetailLimitOrderModal: React.FC<React.PropsWithChildren<DetailLimit
         />
       </Flex>
       <LimitTradeInfoCard
-        currentPriceExchangeRateText="0.002474 SEI = 1 BUSD"
-        currentPriceExchangeRateTextReversed="404.11169 BUSD = 1 SEI"
+        currentPriceExchangeRateText="0.002474 BERA = 1 BUSD"
+        currentPriceExchangeRateTextReversed="404.11169 BUSD = 1 BERA"
         limitPriceExchangeRateText={limitPriceExchangeRateText}
         limitPriceExchangeRateTextReversed={limitPriceExchangeRateTextReversed}
         isOpen={isOpen}
@@ -126,7 +126,7 @@ export const DetailLimitOrderModal: React.FC<React.PropsWithChildren<DetailLimit
         {isOpen ? (
           <>
             <Button variant="primary" mt="16px" as="a" external href={formattedOrder.bscScanUrls.created}>
-              {t('View on SeiTrace')}
+              {t('View on BeraTrail')}
             </Button>
             {!isSubmissionPending && (
               <Button variant="danger" mt="16px" onClick={onCancelOrder}>

@@ -64,7 +64,7 @@ const fetchBnbPrices = async (
       },
     }
   } catch (error) {
-    console.error('Failed to fetch SEI prices', error)
+    console.error('Failed to fetch BERA prices', error)
     return {
       error: true,
       bnbPrices: undefined,
@@ -73,7 +73,7 @@ const fetchBnbPrices = async (
 }
 
 /**
- * Returns SEI prices at current, 24h, 48h, and 7d intervals
+ * Returns BERA prices at current, 24h, 48h, and 7d intervals
  */
 export const useBnbPrices = (): BnbPrices | undefined => {
   const [prices, setPrices] = useState<BnbPrices | undefined>()

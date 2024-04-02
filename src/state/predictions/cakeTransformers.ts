@@ -1,7 +1,7 @@
 import { Bet, BetPosition, Round, PredictionUser } from 'state/types'
 import numberOrNull from 'utils/numberOrNull'
 
-import { RoundResponseFLUIDEX } from './cakeQueries'
+import { RoundResponseBERABORROWEX } from './cakeQueries'
 
 const getRoundPosition = (positionResponse: string) => {
   if (positionResponse === 'Bull') {
@@ -19,7 +19,7 @@ const getRoundPosition = (positionResponse: string) => {
   return null
 }
 
-export const transformBetResponseFLUIDEX = (betResponse): Bet => {
+export const transformBetResponseBERABORROWEX = (betResponse): Bet => {
   const bet = {
     id: betResponse.id,
     hash: betResponse.hash,
@@ -30,24 +30,24 @@ export const transformBetResponseFLUIDEX = (betResponse): Bet => {
     claimedAt: numberOrNull(betResponse.claimedAt),
     claimedBlock: numberOrNull(betResponse.claimedBlock),
     claimedHash: betResponse.claimedHash,
-    claimedBNB: betResponse.claimedFLUIDEX ? parseFloat(betResponse.claimedFLUIDEX) : 0,
-    claimedNetBNB: betResponse.claimedNetFLUIDEX ? parseFloat(betResponse.claimedNetFLUIDEX) : 0,
+    claimedBNB: betResponse.claimedBERABORROWEX ? parseFloat(betResponse.claimedBERABORROWEX) : 0,
+    claimedNetBNB: betResponse.claimedNetBERABORROWEX ? parseFloat(betResponse.claimedNetBERABORROWEX) : 0,
     createdAt: numberOrNull(betResponse.createdAt),
     updatedAt: numberOrNull(betResponse.updatedAt),
   } as Bet
 
   if (betResponse.user) {
-    bet.user = transformUserResponseFLUIDEX(betResponse.user)
+    bet.user = transformUserResponseBERABORROWEX(betResponse.user)
   }
 
   if (betResponse.round) {
-    bet.round = transformRoundResponseFLUIDEX(betResponse.round)
+    bet.round = transformRoundResponseBERABORROWEX(betResponse.round)
   }
 
   return bet
 }
 
-export const transformUserResponseFLUIDEX = (userResponse): PredictionUser => {
+export const transformUserResponseBERABORROWEX = (userResponse): PredictionUser => {
   const {
     id,
     createdAt,
@@ -56,14 +56,14 @@ export const transformUserResponseFLUIDEX = (userResponse): PredictionUser => {
     totalBets,
     totalBetsBull,
     totalBetsBear,
-    totalFLUIDEX,
-    totalFLUIDEXBull,
-    totalFLUIDEXBear,
+    totalBERABORROWEX,
+    totalBERABORROWEXBull,
+    totalBERABORROWEXBear,
     totalBetsClaimed,
-    totalFLUIDEXClaimed,
+    totalBERABORROWEXClaimed,
     winRate,
-    averageFLUIDEX,
-    netFLUIDEX,
+    averageBERABORROWEX,
+    netBERABORROWEX,
   } = userResponse || {}
 
   return {
@@ -74,18 +74,18 @@ export const transformUserResponseFLUIDEX = (userResponse): PredictionUser => {
     totalBets: numberOrNull(totalBets),
     totalBetsBull: numberOrNull(totalBetsBull),
     totalBetsBear: numberOrNull(totalBetsBear),
-    totalBNB: totalFLUIDEX ? parseFloat(totalFLUIDEX) : 0,
-    totalBNBBull: totalFLUIDEXBull ? parseFloat(totalFLUIDEXBull) : 0,
-    totalBNBBear: totalFLUIDEXBear ? parseFloat(totalFLUIDEXBear) : 0,
+    totalBNB: totalBERABORROWEX ? parseFloat(totalBERABORROWEX) : 0,
+    totalBNBBull: totalBERABORROWEXBull ? parseFloat(totalBERABORROWEXBull) : 0,
+    totalBNBBear: totalBERABORROWEXBear ? parseFloat(totalBERABORROWEXBear) : 0,
     totalBetsClaimed: numberOrNull(totalBetsClaimed),
-    totalBNBClaimed: totalFLUIDEXClaimed ? parseFloat(totalFLUIDEXClaimed) : 0,
+    totalBNBClaimed: totalBERABORROWEXClaimed ? parseFloat(totalBERABORROWEXClaimed) : 0,
     winRate: winRate ? parseFloat(winRate) : 0,
-    averageBNB: averageFLUIDEX ? parseFloat(averageFLUIDEX) : 0,
-    netBNB: netFLUIDEX ? parseFloat(netFLUIDEX) : 0,
+    averageBNB: averageBERABORROWEX ? parseFloat(averageBERABORROWEX) : 0,
+    netBNB: netBERABORROWEX ? parseFloat(netBERABORROWEX) : 0,
   }
 }
 
-export const transformRoundResponseFLUIDEX = (roundResponse: RoundResponseFLUIDEX): Round => {
+export const transformRoundResponseBERABORROWEX = (roundResponse: RoundResponseBERABORROWEX): Round => {
   const {
     id,
     epoch,
@@ -137,6 +137,6 @@ export const transformRoundResponseFLUIDEX = (roundResponse: RoundResponseFLUIDE
     bullAmount: bullAmount ? parseFloat(bullAmount) : 0,
     bearBets: numberOrNull(bearBets),
     bearAmount: bearAmount ? parseFloat(bearAmount) : 0,
-    bets: bets.map(transformBetResponseFLUIDEX),
+    bets: bets.map(transformBetResponseBERABORROWEX),
   }
 }

@@ -76,46 +76,46 @@ export const fantomTestnet: Chain = {
   testnet: true,
 }
 
-const bscExplorer = { name: 'SeiTrace', url: 'https://seitrace.com/' }
+const bscExplorer = { name: 'BeraTrail', url: 'https://artio.beratrail.io/' }
 
 export const bsc: Chain = {
-  id: 713715,
-  name: 'SEI Testnet',
-  network: 'SEI',
+  id: 80085,
+  name: 'Berachain Artio',
+  network: 'BERA',
   rpcUrls: {
-    default: 'https://evm-rpc.arctic-1.seinetwork.io',
-    public: 'https://evm-rpc.arctic-1.seinetwork.io',
+    default: 'https://artio.rpc.berachain.com',
+    public: 'https://artio.rpc.berachain.com',
   },
   blockExplorers: {
     default: bscExplorer,
     etherscan: bscExplorer,
   },
   multicall: {
-    address: '0xEe8d287B844959ADe40d718Dc23077ba920e2f07',
-    blockCreated: 1463669,
+    address: '0x9d1dB8253105b007DDDE65Ce262f701814B91125',
+    blockCreated: 1184562, // TODO
   },
   nativeCurrency: {
-    name: 'SEI',
-    symbol: 'sei',
+    name: 'BERA',
+    symbol: 'BERA',
     decimals: 18,
   },
 }
 
 export const bscTest: Chain = {
   id: 97,
-  name: 'SEI Smart Chain Testnet',
-  network: 'sei-testnet testnet',
+  name: 'Berachain Testnet',
+  network: 'Berachain Testnet',
   nativeCurrency: {
     decimals: 18,
-    name: 'SEI',
-    symbol: 'SEI',
+    name: 'BERA',
+    symbol: 'BERA',
   },
   rpcUrls: {
     default: 'https://data-seed-prebsc-1-s2.binance.org:8545/',
     public: 'https://data-seed-prebsc-1-s2.binance.org:8545/',
   },
   blockExplorers: {
-    default: { name: 'SeiTrace', url: 'https://testnet.bscscan.com' },
+    default: { name: 'BeraTrail', url: 'https://testnet.bscscan.com' },
   },
   multicall: {
     address: '0x8F3273Fb89B075b1645095ABaC6ed17B2d4Bc576',

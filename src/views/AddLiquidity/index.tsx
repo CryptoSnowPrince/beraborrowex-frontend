@@ -27,7 +27,7 @@ import { ContractMethodName } from 'utils/types'
 import { transactionErrorToUserReadableMessage } from 'utils/transactionErrorToUserReadableMessage'
 import { useLPApr } from 'state/swap/hooks'
 import { ROUTER_ADDRESS } from 'config/constants/exchange'
-import { FLUIDEX } from 'config/constants/tokens'
+import { POOLEN } from 'config/constants/tokens'
 import { LightCard } from '../../components/Card'
 import { AutoColumn, ColumnCenter } from '../../components/Layout/Column'
 import CurrencyInputPanel from '../../components/CurrencyInputPanel'
@@ -69,7 +69,7 @@ export default function AddLiquidity() {
   const { account, chainId, library } = useActiveWeb3React()
   const expertMode = useIsExpertMode()
 
-  const [currencyIdA, currencyIdB] = router.query.currency || ['SEI', FLUIDEX[chainId]?.address]
+  const [currencyIdA, currencyIdB] = router.query.currency || ['BERA', POOLEN[chainId]?.address]
   const [steps, setSteps] = useState(Steps.Choose)
 
   const dispatch = useAppDispatch()
@@ -197,8 +197,8 @@ export default function AddLiquidity() {
     let value: BigNumber | null
     if (currencyA === ETHER || currencyB === ETHER) {
       const tokenBIsBNB = currencyB === ETHER
-      estimate = routerContract.estimateGas.addLiquiditySEI
-      method = routerContract.addLiquiditySEI
+      estimate = routerContract.estimateGas.addLiquidityBERA
+      method = routerContract.addLiquidityBERA
       args = [
         wrappedCurrency(tokenBIsBNB ? currencyA : currencyB, chainId)?.address ?? '', // token
         (tokenBIsBNB ? parsedAmountA : parsedAmountB).raw.toString(), // token desired

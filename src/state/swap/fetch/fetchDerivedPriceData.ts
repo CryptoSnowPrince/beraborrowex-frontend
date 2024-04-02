@@ -21,14 +21,14 @@ const getTokenDerivedBnbPrices = async (tokenAddress: string, blocks: Block[]) =
     return null
   }
 
-  // format token SEI price results
+  // format token BERA price results
   const tokenPrices: {
     tokenAddress: string
     timestamp: string
     derivedBNB: number
   }[] = []
 
-  // Get Token prices in SEI
+  // Get Token prices in BERA
   Object.keys(prices).forEach((priceKey) => {
     const timestamp = priceKey.split('t')[1]
     if (timestamp) {

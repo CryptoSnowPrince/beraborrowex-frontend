@@ -71,10 +71,10 @@ const LotteryCardData: IconCardData = {
 const bottomLeftImage = {
   path: '/images/home/prediction-cards/',
   attributes: [
-    { src: 'bottom-left', alt: 'FLUIDEX card' },
-    { src: 'green', alt: 'Green FLUIDEX card with up arrow' },
+    { src: 'bottom-left', alt: 'POOLEN card' },
+    { src: 'green', alt: 'Green POOLEN card with up arrow' },
     { src: 'red', alt: 'Red Cake card with down arrow' },
-    { src: 'top-right', alt: 'FLUIDEX card' },
+    { src: 'top-right', alt: 'POOLEN card' },
   ],
 }
 
@@ -108,7 +108,7 @@ const WinSection = () => {
           <ColoredWordHeading textAlign="center" text={t('Win millions in prizes')} />
           <Text color="textSubtle">{t('Provably fair, on-chain games.')}</Text>
           <Text mb="40px" color="textSubtle">
-            {t('Win big with Fluidex.')}
+            {t('Win big with Beraborrowex.')}
           </Text>
           <Flex m="0 auto" flexDirection={['column', null, null, 'row']} maxWidth="600px">
             <Flex

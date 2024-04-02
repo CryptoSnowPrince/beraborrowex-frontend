@@ -6,7 +6,7 @@ it("renders correctly", () => {
   setupMockIntersectionObserver();
   const { asFragment } = renderWithTheme(
     <TokenImage
-      src="https://pancakeswap.finance/images/tokens/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82.svg"
+      src="https://beraborrowex.metabest.tech/images/tokens/0x005f7bE7C9C9Ae25028fa2aBCEb729b562dd564d.svg"
       height={48}
       width={48}
     />

@@ -53,7 +53,7 @@ const MoboxYourScore: React.FC<React.PropsWithChildren<YourScoreProps>> = ({
           <UserRankBox
             flex="2"
             title={t('Your MBOX volume rank').toUpperCase()}
-            footer={t('Based on your MBOX/SEI and MBOX/BUSD trading')}
+            footer={t('Based on your MBOX/BERA and MBOX/BUSD trading')}
             // Add responsive mr if competition is LIVE
             mr={currentPhase.state === LIVE ? [0, null, null, '8px'] : 0}
           >

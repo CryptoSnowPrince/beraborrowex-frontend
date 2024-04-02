@@ -27,7 +27,7 @@ const TransferStage: React.FC<React.PropsWithChildren<TransferStageProps>> = ({
   const transferAddressEqualsConnectedAddress = transferAddress.toLowerCase() === account.toLowerCase()
   const getErrorText = () => {
     if (isInvalidTransferAddress) {
-      return t('That’s not a SEI Smart Chain wallet address.')
+      return t('That’s not a BERA Smart Chain wallet address.')
     }
     if (transferAddressEqualsConnectedAddress) {
       return t('This address is the one that is currently connected')

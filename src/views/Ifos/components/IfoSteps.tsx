@@ -73,14 +73,14 @@ const Step1 = ({ hasProfile }: { hasProfile: boolean }) => {
     <Box>
       <Text>
         {t(
-          'The number of iFLUIDEX equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.',
+          'The number of iBERABORROWEX equals the locked staking amount if the staking duration is longer than %weeks% weeks. If the staking duration is less than %weeks% weeks, it will linearly decrease based on the staking duration.',
           {
             weeks: weeksDisplay,
           },
         )}
       </Text>
-      <InlineLink external href="https://docs.pancakeswap.finance/products/ifo-initial-farm-offering/icake">
-        {t('Learn more about iFLUIDEX')}
+      <InlineLink external href="https://docs.beraborrowex.metabest.tech/products/ifo-initial-farm-offering/icake">
+        {t('Learn more about iBERABORROWEX')}
       </InlineLink>
     </Box>,
     {},
@@ -90,20 +90,20 @@ const Step1 = ({ hasProfile }: { hasProfile: boolean }) => {
     <CardBody>
       {tooltipVisible && tooltip}
       <Heading as="h4" color="secondary" mb="16px">
-        {t('Lock FLUIDEX in the FLUIDEX pool')}
+        {t('Lock POOLEN in the POOLEN pool')}
       </Heading>
       <Box>
         <Text mb="4px" color="textSubtle" small>
           {t(
-            'The maximum amount of FLUIDEX you can commit to the Public Sale equals the number of your iFLUIDEX. Lock more FLUIDEX for longer durations to increase the maximum FLUIDEX you can commit to the sale.',
+            'The maximum amount of POOLEN you can commit to the Public Sale equals the number of your iBERABORROWEX. Lock more POOLEN for longer durations to increase the maximum POOLEN you can commit to the sale.',
           )}
         </Text>
         <TooltipText as="span" fontWeight={700} ref={targetRef} color="textSubtle" small>
-          {t('How does the number of iFLUIDEX calculated?')}
+          {t('How does the number of iBERABORROWEX calculated?')}
         </TooltipText>
         <Text mt="4px" color="textSubtle" small>
           {t(
-            'Missed this IFO? You will enjoy the same amount of iFLUIDEX for future IFOs if your locked-staking position is not unlocked.',
+            'Missed this IFO? You will enjoy the same amount of iBERABORROWEX for future IFOs if your locked-staking position is not unlocked.',
           )}
         </Text>
       </Box>
@@ -114,7 +114,7 @@ const Step1 = ({ hasProfile }: { hasProfile: boolean }) => {
               <LogoRoundIcon style={{ alignSelf: 'flex-start' }} width={32} height={32} />
               <Box ml="16px">
                 <Text bold fontSize="12px" textTransform="uppercase" color="secondary">
-                  {t('Your max FLUIDEX entry')}
+                  {t('Your max POOLEN entry')}
                 </Text>
                 <Balance fontSize="20px" bold decimals={5} value={getBalanceNumber(credit)} />
                 <Text fontSize="12px" color="textSubtle">
@@ -145,17 +145,17 @@ const Step2 = ({ hasProfile, isLive, isCommitted }: { hasProfile: boolean; isLiv
   return (
     <CardBody>
       <Heading as="h4" color="secondary" mb="16px">
-        {t('Commit FLUIDEX')}
+        {t('Commit POOLEN')}
       </Heading>
       <Text color="textSubtle" small>
         {t(
-          'Please note that FLUIDEX in the fixed-term staking positions will remain locked and can not be used for committing to IFO sales. You will need a separate amount of FLUIDEX in your wallet balance to commit to the IFO sales.',
+          'Please note that POOLEN in the fixed-term staking positions will remain locked and can not be used for committing to IFO sales. You will need a separate amount of POOLEN in your wallet balance to commit to the IFO sales.',
         )}{' '}
         <br />
       </Text>
       {hasProfile && isLive && !isCommitted && (
         <Button as="a" href="#current-ifo" mt="16px">
-          {t('Commit FLUIDEX')}
+          {t('Commit POOLEN')}
         </Button>
       )}
     </CardBody>
@@ -216,7 +216,7 @@ const IfoSteps: React.FC<React.PropsWithChildren<TypeProps>> = ({
               {t('Activate your Profile')}
             </Heading>
             <Text color="textSubtle" small mb="16px">
-              {t('You’ll need an active Fluidex Profile to take part in an IFO!')}
+              {t('You’ll need an active Beraborrowex Profile to take part in an IFO!')}
             </Text>
             {renderAccountStatus()}
           </CardBody>
@@ -233,7 +233,7 @@ const IfoSteps: React.FC<React.PropsWithChildren<TypeProps>> = ({
             </Heading>
             <Text color="textSubtle" small>
               {t(
-                'After the IFO sales finish, you can claim any IFO tokens that you bought, and any unspent FLUIDEX tokens will be returned to your wallet.',
+                'After the IFO sales finish, you can claim any IFO tokens that you bought, and any unspent POOLEN tokens will be returned to your wallet.',
               )}
             </Text>
           </CardBody>

@@ -79,9 +79,9 @@ const WinRateModal: React.FC<React.PropsWithChildren<WinRateModalProps>> = ({
     setCalculatorMode(CalculatorMode.WIN_RATE_BASED_ON_PRINCIPAL)
   }
 
-  const editingUnit = editingCurrency === EditingCurrency.TOKEN ? 'FLUIDEX' : 'USD'
+  const editingUnit = editingCurrency === EditingCurrency.TOKEN ? 'POOLEN' : 'USD'
   const editingValue = editingCurrency === EditingCurrency.TOKEN ? principalAsToken : principalAsUSD
-  const conversionUnit = editingCurrency === EditingCurrency.TOKEN ? 'USD' : 'FLUIDEX'
+  const conversionUnit = editingCurrency === EditingCurrency.TOKEN ? 'USD' : 'POOLEN'
   const conversionValue = editingCurrency === EditingCurrency.TOKEN ? principalAsUSD : principalAsToken
   const onUserInput = editingCurrency === EditingCurrency.TOKEN ? setPrincipalFromTokenValue : setPrincipalFromUSDValue
 

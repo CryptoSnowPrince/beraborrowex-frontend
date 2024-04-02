@@ -35,7 +35,7 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
         eventStatus: [SaleStatusEnum.Pending, SaleStatusEnum.Premint],
       }),
       title: t('Activate your profile'),
-      bodyText: [t('You’ll need an active Fluidex Profile to buy Minting Tickets and mint a Pancake Squad NFT!')],
+      bodyText: [t('You’ll need an active Beraborrowex Profile to buy Minting Tickets and mint a Pancake Squad NFT!')],
       buttons: (
         <>
           <ActivateProfileButton userStatus={userStatus} t={t} />
@@ -50,17 +50,17 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
         hasProfileActivated,
         eventStatus: [SaleStatusEnum.Pending, SaleStatusEnum.Premint],
       }),
-      title: t('Hold FLUIDEX'),
-      bodyText: [t('Each NFT costs FLUIDEX to mint. Remember you also need SEI to cover transaction fees too!')],
+      title: t('Hold POOLEN'),
+      bodyText: [t('Each NFT costs POOLEN to mint. Remember you also need BERA to cover transaction fees too!')],
       buttons: (
         <>
           <Button
             as="a"
-            href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
+            href="https://beraborrowex.metabest.tech/swap?outputCurrency=0x005f7bE7C9C9Ae25028fa2aBCEb729b562dd564d"
             target="_blank"
             width="100%"
           >
-            {t('Buy FLUIDEX')}
+            {t('Buy POOLEN')}
           </Button>
         </>
       ),

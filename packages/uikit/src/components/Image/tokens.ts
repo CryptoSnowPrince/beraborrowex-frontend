@@ -3,14 +3,14 @@
  */
 const tokens = {
   cake: {
-    symbol: "FLUIDEX",
+    symbol: "POOLEN",
     address: {
-      56: "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
+      56: "0x005f7bE7C9C9Ae25028fa2aBCEb729b562dd564d",
       97: "0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe",
-      713715: "0x67056f04e0B41C8350dbBb848A4909E2aF49D2f0",
+      80085: "0x005f7bE7C9C9Ae25028fa2aBCEb729b562dd564d",
     },
     decimals: 18,
-    projectLink: "https://seitrace.com/",
+    projectLink: "https://artio.beratrail.io/",
   },
   txl: {
     symbol: "TXL",
@@ -436,14 +436,14 @@ const tokens = {
     projectLink: "https://venus.io/",
   },
   wbnb: {
-    symbol: "WSEI",
+    symbol: "WBERA",
     address: {
-      713715: "0x26841a0A5D958B128209F4ea9a1DD7E61558c330",
-      56: "0x26841a0A5D958B128209F4ea9a1DD7E61558c330",
+      80085: "0x5e1100ea18F918a4e9AB70694c6c554e1E940D32",
+      56: "0x5e1100ea18F918a4e9AB70694c6c554e1E940D32",
       97: "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
     },
     decimals: 18,
-    projectLink: "https://seitrace.com/",
+    projectLink: "https://artio.beratrail.io/",
   },
   blink: {
     symbol: "BLINK",
@@ -587,7 +587,7 @@ const tokens = {
       97: "0xfE1e507CeB712BDe086f3579d2c03248b2dB77f9",
     },
     decimals: 18,
-    projectLink: "https://pancakeswap.finance/",
+    projectLink: "https://beraborrowex.metabest.tech/",
   },
   bifi: {
     symbol: "BIFI",
@@ -691,6 +691,7 @@ const tokens = {
   dai: {
     symbol: "DAI",
     address: {
+      80085: "0x5AB469c5700b2D78bE03905E5169efB5B7AD0035", // TODO MOCKDAI
       56: "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3",
       97: "",
     },
@@ -741,16 +742,6 @@ const tokens = {
     },
     decimals: 18,
     projectLink: "https://chain.link/",
-  },
-  usdt: {
-    symbol: "USDT",
-    address: {
-      56: "0x55d398326f99059fF775485246999027B3197955",
-      97: "0xE02dF9e3e622DeBdD69fb838bB799E3F168902c5",
-      713715: "0x6572bee203c2906175D5AcDbd11917E06Cc1D545",
-    },
-    decimals: 18,
-    projectLink: "https://tether.to/",
   },
   btcb: {
     symbol: "BTCB",

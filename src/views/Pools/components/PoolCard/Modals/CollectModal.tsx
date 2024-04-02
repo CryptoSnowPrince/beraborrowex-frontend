@@ -56,8 +56,8 @@ const CollectModal: React.FC<React.PropsWithChildren<CollectModalProps>> = ({
   const [shouldCompound, setShouldCompound] = useState(isCompoundPool)
   const { targetRef, tooltip, tooltipVisible } = useTooltip(
     <>
-      <Text mb="12px">{t('Compound: collect and restake FLUIDEX into pool.')}</Text>
-      <Text>{t('Harvest: collect FLUIDEX and send to wallet')}</Text>
+      <Text mb="12px">{t('Compound: collect and restake POOLEN into pool.')}</Text>
+      <Text>{t('Harvest: collect POOLEN and send to wallet')}</Text>
     </>,
     { placement: 'bottom-end', tooltipOffset: [20, 10] },
   )

@@ -29,7 +29,7 @@ const getFarmBaseTokenPrice = (
     return hasTokenPriceVsQuote ? bnbPriceBusd.times(farm.tokenPriceVsQuote) : BIG_ZERO
   }
 
-  // We can only calculate profits without a quoteTokenFarm for BUSD/SEI farms
+  // We can only calculate profits without a quoteTokenFarm for BUSD/BERA farms
   if (!quoteTokenFarm) {
     return BIG_ZERO
   }
@@ -37,8 +37,8 @@ const getFarmBaseTokenPrice = (
   // Possible alternative farm quoteTokens:
   // UST (i.e. MIR-UST), pBTC (i.e. PNT-pBTC), BTCB (i.e. bBADGER-BTCB), ETH (i.e. SUSHI-ETH)
   // If the farm's quote token isn't BUSD or WBNB, we then use the quote token, of the original farm's quote token
-  // i.e. for farm PNT - pBTC we use the pBTC farm's quote token - SEI, (pBTC - SEI)
-  // from the SEI - pBTC price, we can calculate the PNT - BUSD price
+  // i.e. for farm PNT - pBTC we use the pBTC farm's quote token - BERA, (pBTC - BERA)
+  // from the BERA - pBTC price, we can calculate the PNT - BUSD price
   if (quoteTokenFarm.quoteToken.symbol === bscTokens.wbnb.symbol) {
     const quoteTokenInBusd = bnbPriceBusd.times(quoteTokenFarm.tokenPriceVsQuote)
     return hasTokenPriceVsQuote && quoteTokenInBusd

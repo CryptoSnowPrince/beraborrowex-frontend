@@ -94,7 +94,7 @@ const ConnectModal: React.FC<React.PropsWithChildren<Props>> = ({
           </Text>
           <Button
             as="a"
-            href="https://docs.pancakeswap.finance/get-started/connection-guide"
+            href="https://docs.beraborrowex.metabest.tech/get-started/connection-guide"
             variant="subtle"
             width="100%"
             {...EXTERNAL_LINK_PROPS}

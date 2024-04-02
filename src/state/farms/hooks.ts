@@ -47,8 +47,8 @@ export const usePollFarmsWithUserData = () => {
 
 /**
  * Fetches the "core" farm data used globally
- * 2 = FLUIDEX-SEI LP
- * 3 = BUSD-SEI LP
+ * 2 = POOLEN-BERA LP
+ * 3 = BUSD-BERA LP
  */
 const coreFarmPIDs = {
   56: [2, 3],

@@ -170,7 +170,7 @@ const campaigns: Campaign[] = [
     id: '513010001',
     type: 'participation',
     title: 'Syrup Soaker',
-    description: 'Took a dip in the early days of the Auto FLUIDEX Pool',
+    description: 'Took a dip in the early days of the Auto POOLEN Pool',
     badge: 'syrup-soaker.svg',
   },
   {
@@ -205,7 +205,7 @@ const campaigns: Campaign[] = [
     id: '516010001',
     type: 'participation',
     title: '1 Year',
-    description: 'Joined Fluidex during the first year of our journey!',
+    description: 'Joined Beraborrowex during the first year of our journey!',
     badge: '1-year.svg',
   },
   {

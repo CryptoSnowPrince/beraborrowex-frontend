@@ -28,7 +28,7 @@ const RoundsTab: React.FC<React.PropsWithChildren<RoundsTabProps>> = ({ hasBetHi
     dispatch(fetchNodeHistory({ account, page: currentHistoryPage + 1 }))
   }
 
-  const v1Claim = token.symbol === 'SEI' ? <V1ClaimCheck /> : null
+  const v1Claim = token.symbol === 'BERA' ? <V1ClaimCheck /> : null
 
   return hasBetHistory ? (
     <>

@@ -702,7 +702,7 @@ it("renders ConnectModal correctly", () => {
             </p>
             <a
               class="c22"
-              href="https://docs.pancakeswap.finance/get-started/connection-guide"
+              href="https://docs.beraborrowex.metabest.tech/get-started/connection-guide"
               rel="noreferrer noopener"
               scale="md"
               target="_blank"

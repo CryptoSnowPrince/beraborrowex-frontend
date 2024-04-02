@@ -4,15 +4,15 @@ import {
   userBaseFields as userBaseFieldsBNB,
 } from './bnbQueries'
 import {
-  roundBaseFields as roundBaseFieldsFLUIDEX,
-  betBaseFields as betBaseFieldsFLUIDEX,
-  userBaseFields as userBaseFieldsFLUIDEX,
+  roundBaseFields as roundBaseFieldsBERABORROWEX,
+  betBaseFields as betBaseFieldsBERABORROWEX,
+  userBaseFields as userBaseFieldsBERABORROWEX,
 } from './cakeQueries'
 
 export const getRoundBaseFields = (tokenSymbol: string) =>
-  tokenSymbol === 'FLUIDEX' ? roundBaseFieldsFLUIDEX : roundBaseFieldsBNB
+  tokenSymbol === 'POOLEN' ? roundBaseFieldsBERABORROWEX : roundBaseFieldsBNB
 
-export const getBetBaseFields = (tokenSymbol: string) => (tokenSymbol === 'FLUIDEX' ? betBaseFieldsFLUIDEX : betBaseFieldsBNB)
+export const getBetBaseFields = (tokenSymbol: string) => (tokenSymbol === 'POOLEN' ? betBaseFieldsBERABORROWEX : betBaseFieldsBNB)
 
 export const getUserBaseFields = (tokenSymbol: string) =>
-  tokenSymbol === 'FLUIDEX' ? userBaseFieldsFLUIDEX : userBaseFieldsBNB
+  tokenSymbol === 'POOLEN' ? userBaseFieldsBERABORROWEX : userBaseFieldsBNB

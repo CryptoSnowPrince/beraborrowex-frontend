@@ -70,7 +70,7 @@ const ReviewStage: React.FC<React.PropsWithChildren<ReviewStageProps>> = ({
             scale="sm"
             variant="subtle"
           >
-            <ButtonMenuItem>SEI</ButtonMenuItem>
+            <ButtonMenuItem>BERA</ButtonMenuItem>
             <ButtonMenuItem>WBNB</ButtonMenuItem>
           </ButtonMenu>
           <Text small color="textSubtle">
@@ -78,7 +78,7 @@ const ReviewStage: React.FC<React.PropsWithChildren<ReviewStageProps>> = ({
           </Text>
           <BnbAmountCell bnbAmount={nftPrice} />
           <Text small color="textSubtle">
-            {t('%symbol% in wallet', { symbol: paymentCurrency === PaymentCurrency.SEI ? 'SEI' : 'WBNB' })}
+            {t('%symbol% in wallet', { symbol: paymentCurrency === PaymentCurrency.BERA ? 'BERA' : 'WBNB' })}
           </Text>
           {!account ? (
             <Flex justifySelf="flex-end">
@@ -96,14 +96,14 @@ const ReviewStage: React.FC<React.PropsWithChildren<ReviewStageProps>> = ({
           <Message p="8px" variant="danger">
             <Text>
               {t('Not enough %symbol% to purchase this NFT', {
-                symbol: paymentCurrency === PaymentCurrency.SEI ? 'SEI' : 'WBNB',
+                symbol: paymentCurrency === PaymentCurrency.BERA ? 'BERA' : 'WBNB',
               })}
             </Text>
           </Message>
         )}
         <Flex alignItems="center">
           <Text my="16px" mr="4px">
-            {t('Convert between SEI and WSEI for free')}:
+            {t('Convert between BERA and WBERA for free')}:
           </Text>
           <Button
             as={Link}
@@ -111,7 +111,7 @@ const ReviewStage: React.FC<React.PropsWithChildren<ReviewStageProps>> = ({
             height="16px"
             external
             variant="text"
-            href="/swap?inputCurrency=SEI&outputCurrency=0x26841a0A5D958B128209F4ea9a1DD7E61558c330"
+            href="/swap?inputCurrency=BERA&outputCurrency=0x5e1100ea18F918a4e9AB70694c6c554e1E940D32"
           >
             {t('Convert')}
           </Button>
@@ -126,8 +126,8 @@ const ReviewStage: React.FC<React.PropsWithChildren<ReviewStageProps>> = ({
         >
           {t('Checkout')}
         </Button>
-        <Button as={Link} external style={{ width: '100%' }} href="/swap?outputCurrency=SEI" variant="secondary">
-          {t('Get %symbol1% or %symbol2%', { symbol1: 'SEI', symbol2: 'WBNB' })}
+        <Button as={Link} external style={{ width: '100%' }} href="/swap?outputCurrency=BERA" variant="secondary">
+          {t('Get %symbol1% or %symbol2%', { symbol1: 'BERA', symbol2: 'WBNB' })}
         </Button>
       </Flex>
     </>

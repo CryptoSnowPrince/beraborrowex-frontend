@@ -1,8 +1,8 @@
 {
-  "short_name": "Fluidex",
-  "name": "Fluidex",
-  "description": "Fluidex LP Tokens",
-  "homepage_url": "https://fluidex.finance",
+  "short_name": "Beraborrowex",
+  "name": "Beraborrowex",
+  "description": "Beraborrowex LP Tokens",
+  "homepage_url": "https://beraborrowex.metabest.tech",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#1FC7D4",

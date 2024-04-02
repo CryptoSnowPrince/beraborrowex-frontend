@@ -108,7 +108,7 @@ function CurrencySearch({
 
   const showBNB: boolean = useMemo(() => {
     const s = debouncedQuery.toLowerCase().trim()
-    return s === '' || s === 's' || s === 'se' || s === 'sei'
+    return s === '' || s === 'b' || s === 'be' || s === 'ber' || s === 'bera'
   }, [debouncedQuery])
 
   const filteredTokens: Token[] = useMemo(() => {

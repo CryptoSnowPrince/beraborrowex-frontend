@@ -7,13 +7,13 @@ import { calculateSlippageAmount, basisPointsToPercent } from 'utils/exchange'
 describe('utils', () => {
   describe('#getBscScanLink', () => {
     it('correct for tx', () => {
-      expect(getBscScanLink('abc', 'transaction', ChainId.BSC)).toEqual('https://bscscan.com/tx/abc')
+      expect(getBscScanLink('abc', 'transaction', ChainId.BSC)).toEqual('https://artio.beratrail.io/tx/abc')
     })
     it('correct for token', () => {
-      expect(getBscScanLink('abc', 'token', ChainId.BSC)).toEqual('https://bscscan.com/token/abc')
+      expect(getBscScanLink('abc', 'token', ChainId.BSC)).toEqual('https://artio.beratrail.io/token/abc')
     })
     it('correct for address', () => {
-      expect(getBscScanLink('abc', 'address', ChainId.BSC)).toEqual('https://bscscan.com/address/abc')
+      expect(getBscScanLink('abc', 'address', ChainId.BSC)).toEqual('https://artio.beratrail.io/address/abc')
     })
     it('enum', () => {
       expect(getBscScanLink('abc', 'address', ChainId.BSC_TESTNET)).toEqual('https://testnet.bscscan.com/address/abc')

@@ -3,7 +3,7 @@ import { SalesSectionProps } from '.'
 
 export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
   headingText: t('Trade anything. No registration, no hassle.'),
-  bodyText: t('Trade any token on SEI Smart Chain in seconds, just by connecting your wallet.'),
+  bodyText: t('Trade any token on BERA Smart Chain in seconds, just by connecting your wallet.'),
   reverse: false,
   primaryButton: {
     to: '/swap',
@@ -11,23 +11,23 @@ export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.pancakeswap.finance/',
+    to: 'https://docs.beraborrowex.metabest.tech/',
     text: t('Learn'),
     external: true,
   },
   images: {
     path: '/images/home/trade/',
     attributes: [
-      { src: 'SEI', alt: t('SEI token') },
+      { src: 'BERA', alt: t('BERA token') },
       { src: 'BTC', alt: t('BTC token') },
-      { src: 'FLUIDEX', alt: t('FLUIDEX token') },
+      { src: 'POOLEN', alt: t('POOLEN token') },
     ],
   },
 })
 
 export const earnSectionData = (t: TranslateFunction): SalesSectionProps => ({
   headingText: t('Earn passive income with crypto.'),
-  bodyText: t('Fluidex makes it easy to make your crypto work for you.'),
+  bodyText: t('Beraborrowex makes it easy to make your crypto work for you.'),
   reverse: true,
   primaryButton: {
     to: '/farms',
@@ -35,7 +35,7 @@ export const earnSectionData = (t: TranslateFunction): SalesSectionProps => ({
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.pancakeswap.finance/products/yield-farming',
+    to: 'https://docs.beraborrowex.metabest.tech/products/yield-farming',
     text: t('Learn'),
     external: true,
   },
@@ -50,18 +50,18 @@ export const earnSectionData = (t: TranslateFunction): SalesSectionProps => ({
 })
 
 export const cakeSectionData = (t: TranslateFunction): SalesSectionProps => ({
-  headingText: t('FLUIDEX makes our world go round.'),
+  headingText: t('POOLEN makes our world go round.'),
   bodyText: t(
-    'FLUIDEX token is at the heart of the Fluidex ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!',
+    'POOLEN token is at the heart of the Beraborrowex ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!',
   ),
   reverse: false,
   primaryButton: {
-    to: '/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
-    text: t('Buy FLUIDEX'),
+    to: '/swap?outputCurrency=0x005f7bE7C9C9Ae25028fa2aBCEb729b562dd564d',
+    text: t('Buy POOLEN'),
     external: false,
   },
   secondaryButton: {
-    to: 'https://docs.pancakeswap.finance/tokenomics/cake',
+    to: 'https://docs.beraborrowex.metabest.tech/tokenomics/cake',
     text: t('Learn'),
     external: true,
   },
@@ -71,7 +71,7 @@ export const cakeSectionData = (t: TranslateFunction): SalesSectionProps => ({
     attributes: [
       { src: 'bottom-right', alt: t('Small 3d pancake') },
       { src: 'top-right', alt: t('Small 3d pancake') },
-      { src: 'coin', alt: t('FLUIDEX token') },
+      { src: 'coin', alt: t('POOLEN token') },
       { src: 'top-left', alt: t('Small 3d pancake') },
     ],
   },

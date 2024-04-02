@@ -1,7 +1,7 @@
 [
   {
     "inputs": [],
-    "name": "WSEI",
+    "name": "WBERA",
     "outputs": [
       {
         "internalType": "address",
@@ -109,7 +109,7 @@
         "type": "uint256"
       }
     ],
-    "name": "addLiquiditySEI",
+    "name": "addLiquidityBERA",
     "outputs": [
       {
         "internalType": "uint256",
@@ -365,7 +365,7 @@
         "type": "uint256"
       }
     ],
-    "name": "removeLiquiditySEI",
+    "name": "removeLiquidityBERA",
     "outputs": [
       {
         "internalType": "uint256",
@@ -414,7 +414,7 @@
         "type": "uint256"
       }
     ],
-    "name": "removeLiquiditySEISupportingFeeOnTransferTokens",
+    "name": "removeLiquidityBERASupportingFeeOnTransferTokens",
     "outputs": [
       {
         "internalType": "uint256",
@@ -478,7 +478,7 @@
         "type": "bytes32"
       }
     ],
-    "name": "removeLiquiditySEIWithPermit",
+    "name": "removeLiquidityBERAWithPermit",
     "outputs": [
       {
         "internalType": "uint256",
@@ -547,7 +547,7 @@
         "type": "bytes32"
       }
     ],
-    "name": "removeLiquiditySEIWithPermitSupportingFeeOnTransferTokens",
+    "name": "removeLiquidityBERAWithPermitSupportingFeeOnTransferTokens",
     "outputs": [
       {
         "internalType": "uint256",
@@ -655,7 +655,7 @@
         "type": "uint256"
       }
     ],
-    "name": "swapSEIForExactTokens",
+    "name": "swapBERAForExactTokens",
     "outputs": [
       {
         "internalType": "uint256[]",
@@ -689,7 +689,7 @@
         "type": "uint256"
       }
     ],
-    "name": "swapExactSEIForTokens",
+    "name": "swapExactBERAForTokens",
     "outputs": [
       {
         "internalType": "uint256[]",
@@ -723,7 +723,7 @@
         "type": "uint256"
       }
     ],
-    "name": "swapExactSEIForTokensSupportingFeeOnTransferTokens",
+    "name": "swapExactBERAForTokensSupportingFeeOnTransferTokens",
     "outputs": [],
     "stateMutability": "payable",
     "type": "function"
@@ -756,7 +756,7 @@
         "type": "uint256"
       }
     ],
-    "name": "swapExactTokensForSEI",
+    "name": "swapExactTokensForBERA",
     "outputs": [
       {
         "internalType": "uint256[]",
@@ -795,7 +795,7 @@
         "type": "uint256"
       }
     ],
-    "name": "swapExactTokensForSEISupportingFeeOnTransferTokens",
+    "name": "swapExactTokensForBERASupportingFeeOnTransferTokens",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -900,7 +900,7 @@
         "type": "uint256"
       }
     ],
-    "name": "swapTokensForExactSEI",
+    "name": "swapTokensForExactBERA",
     "outputs": [
       {
         "internalType": "uint256[]",

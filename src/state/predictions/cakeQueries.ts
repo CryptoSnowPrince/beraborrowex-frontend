@@ -1,28 +1,28 @@
 import { UserResponse, BetResponse, HistoricalBetResponse, RoundResponse } from './responseType'
 
-export interface UserResponseFLUIDEX extends UserResponse<BetResponseFLUIDEX> {
-  totalFLUIDEX: string
-  totalFLUIDEXBull: string
-  totalFLUIDEXBear: string
-  averageFLUIDEX: string
-  totalFLUIDEXClaimed: string
-  netFLUIDEX: string
+export interface UserResponseBERABORROWEX extends UserResponse<BetResponseBERABORROWEX> {
+  totalBERABORROWEX: string
+  totalBERABORROWEXBull: string
+  totalBERABORROWEXBear: string
+  averageBERABORROWEX: string
+  totalBERABORROWEXClaimed: string
+  netBERABORROWEX: string
 }
 
-export interface BetResponseFLUIDEX extends BetResponse {
-  claimedFLUIDEX: string
-  claimedNetFLUIDEX: string
-  user?: UserResponseFLUIDEX
-  round?: RoundResponseFLUIDEX
+export interface BetResponseBERABORROWEX extends BetResponse {
+  claimedBERABORROWEX: string
+  claimedNetBERABORROWEX: string
+  user?: UserResponseBERABORROWEX
+  round?: RoundResponseBERABORROWEX
 }
 
-export type HistoricalBetResponseFLUIDEX = HistoricalBetResponse<UserResponseFLUIDEX>
+export type HistoricalBetResponseBERABORROWEX = HistoricalBetResponse<UserResponseBERABORROWEX>
 
-export type RoundResponseFLUIDEX = RoundResponse<BetResponseFLUIDEX>
+export type RoundResponseBERABORROWEX = RoundResponse<BetResponseBERABORROWEX>
 
-export interface TotalWonMarketResponseFLUIDEX {
-  totalFLUIDEX: string
-  totalFLUIDEXTreasury: string
+export interface TotalWonMarketResponseBERABORROWEX {
+  totalBERABORROWEX: string
+  totalBERABORROWEXTreasury: string
 }
 
 /**
@@ -63,8 +63,8 @@ export const betBaseFields = `
  claimedAt
  claimedHash
  claimedBlock
- claimedFLUIDEX
- claimedNetFLUIDEX
+ claimedBERABORROWEX
+ claimedNetBERABORROWEX
  createdAt
  updatedAt
 `
@@ -77,12 +77,12 @@ export const userBaseFields = `
   totalBets
   totalBetsBull
   totalBetsBear
-  totalFLUIDEX
-  totalFLUIDEXBull
-  totalFLUIDEXBear
+  totalBERABORROWEX
+  totalBERABORROWEXBull
+  totalBERABORROWEXBear
   totalBetsClaimed
-  totalFLUIDEXClaimed
+  totalBERABORROWEXClaimed
   winRate
-  averageFLUIDEX
-  netFLUIDEX
+  averageBERABORROWEX
+  netBERABORROWEX
 `

@@ -1,5 +1,5 @@
 import { request, gql } from 'graphql-request'
-import { GRAPH_API_PREDICTION_BNB, GRAPH_API_PREDICTION_FLUIDEX } from 'config/constants/endpoints'
+import { GRAPH_API_PREDICTION_BNB, GRAPH_API_PREDICTION_POOLEN } from 'config/constants/endpoints'
 import { BigNumber } from '@ethersproject/bignumber'
 import {
   Bet,
@@ -19,11 +19,11 @@ import { Zero } from '@ethersproject/constants'
 import { PredictionsClaimableResponse, PredictionsLedgerResponse, PredictionsRoundsResponse } from 'utils/types'
 import { getRoundBaseFields, getBetBaseFields, getUserBaseFields } from './queries'
 import { ROUNDS_PER_PAGE } from './config'
-import { transformBetResponseFLUIDEX, transformUserResponseFLUIDEX } from './cakeTransformers'
+import { transformBetResponseBERABORROWEX, transformUserResponseBERABORROWEX } from './cakeTransformers'
 import { transformBetResponseBNB, transformUserResponseBNB } from './bnbTransformers'
 import { BetResponse, UserResponse } from './responseType'
 import { BetResponseBNB } from './bnbQueries'
-import { BetResponseFLUIDEX } from './cakeQueries'
+import { BetResponseBERABORROWEX } from './cakeQueries'
 
 export enum Result {
   WIN = 'win',
@@ -34,10 +34,10 @@ export enum Result {
 }
 
 export const transformBetResponse = (tokenSymbol) =>
-  tokenSymbol === 'FLUIDEX' ? transformBetResponseFLUIDEX : transformBetResponseBNB
+  tokenSymbol === 'POOLEN' ? transformBetResponseBERABORROWEX : transformBetResponseBNB
 
 export const transformUserResponse = (tokenSymbol) =>
-  tokenSymbol === 'FLUIDEX' ? transformUserResponseFLUIDEX : transformUserResponseBNB
+  tokenSymbol === 'POOLEN' ? transformUserResponseBERABORROWEX : transformUserResponseBNB
 
 export const getRoundResult = (bet: Bet, currentEpoch: number): Result => {
   const { round } = bet
@@ -79,8 +79,8 @@ const getTotalWonMarket = (market, tokenSymbol) => {
   return Math.max(total - totalTreasury, 0)
 }
 
-export const getTotalWon = async (): Promise<{ totalWonBNB: number; totalWonFLUIDEX: number }> => {
-  const [{ market: BNBMarket, market: FLUIDEXMarket }] = await Promise.all([
+export const getTotalWon = async (): Promise<{ totalWonBNB: number; totalWonBERABORROWEX: number }> => {
+  const [{ market: BNBMarket, market: BERABORROWEXMarket }] = await Promise.all([
     request(
       GRAPH_API_PREDICTION_BNB,
       gql`
@@ -93,22 +93,22 @@ export const getTotalWon = async (): Promise<{ totalWonBNB: number; totalWonFLUI
       `,
     ),
     request(
-      GRAPH_API_PREDICTION_FLUIDEX,
+      GRAPH_API_PREDICTION_POOLEN,
       gql`
         query getTotalWonData {
           market(id: 1) {
-            totalFLUIDEX
-            totalFLUIDEXTreasury
+            totalBERABORROWEX
+            totalBERABORROWEXTreasury
           }
         }
       `,
     ),
   ])
 
-  const totalWonBNB = getTotalWonMarket(BNBMarket, 'SEI')
-  const totalWonFLUIDEX = getTotalWonMarket(FLUIDEXMarket, 'FLUIDEX')
+  const totalWonBNB = getTotalWonMarket(BNBMarket, 'BERA')
+  const totalWonBERABORROWEX = getTotalWonMarket(BERABORROWEXMarket, 'POOLEN')
 
-  return { totalWonBNB, totalWonFLUIDEX }
+  return { totalWonBNB, totalWonBERABORROWEX }
 }
 
 type WhereClause = Record<string, string | number | boolean | string[]>
@@ -119,7 +119,7 @@ export const getBetHistory = async (
   skip = 0,
   api: string,
   tokenSymbol: string,
-): Promise<Array<BetResponseBNB | BetResponseFLUIDEX>> => {
+): Promise<Array<BetResponseBNB | BetResponseBERABORROWEX>> => {
   const response = await request(
     api,
     gql`

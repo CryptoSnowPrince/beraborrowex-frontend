@@ -102,7 +102,7 @@ const PreviousRoundCardBody: React.FC<React.PropsWithChildren<PreviousRoundCardB
           value={prizeInBusd}
         />
         <Balance
-          unit=" FLUIDEX"
+          unit=" POOLEN"
           mb="18px"
           fontSize="14px"
           color="textSubtle"
@@ -127,7 +127,7 @@ const PreviousRoundCardBody: React.FC<React.PropsWithChildren<PreviousRoundCardB
             m={['10px auto auto auto', '10px auto auto auto', 'auto 0 0 auto']}
             href={getBscScanLink(txid, 'transaction')}
           >
-            {t('View on SeiTrace')}
+            {t('View on BeraTrail')}
           </LinkExternal>
         </Flex>
       </Flex>

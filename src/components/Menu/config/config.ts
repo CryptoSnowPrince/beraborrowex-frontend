@@ -70,7 +70,7 @@ const config: (
     //     },
     //     // {
     //     //   label: t('Perpetual'),
-    //     //   href: `https://perp.pancakeswap.finance/${perpLangMap(languageCode)}/futures/BTCUSDT?theme=${perpTheme(
+    //     //   href: `https://perp.beraborrowex.metabest.tech/${perpLangMap(languageCode)}/futures/BTCUSDT?theme=${perpTheme(
     //     //     isDark,
     //     //   )}`,
     //     //   type: DropdownMenuItemType.EXTERNAL_LINK,
@@ -181,7 +181,7 @@ const config: (
     //     },
     //     {
     //       label: t('Docs'),
-    //       href: 'https://docs.pancakeswap.finance',
+    //       href: 'https://docs.beraborrowex.metabest.tech',
     //       type: DropdownMenuItemType.EXTERNAL_LINK,
     //     },
     //   ],

@@ -88,7 +88,7 @@ const ConfirmModal: React.FC<React.PropsWithChildren<ConfirmModalProps>> = ({
                 {t('Transaction Submitted')}
               </Text>
               <LinkExternal href={getBscScanLink(txHash, 'transaction', chainId)} mb="30px">
-                {t('View on SeiTrace')}: {truncateHash(txHash, 8, 0)}
+                {t('View on BeraTrail')}: {truncateHash(txHash, 8, 0)}
               </LinkExternal>
               <Flex
                 justifyContent="center"

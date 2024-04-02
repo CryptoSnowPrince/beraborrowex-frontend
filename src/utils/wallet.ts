@@ -8,12 +8,12 @@ import { BSC_RPC_URLS, BSC_TESTNET_RPC_URLS } from '../config/constants/rpc'
 
 const NETWORK_CONFIG = {
   [ChainId.BSC]: {
-    name: 'SEI Smart Chain Mainnet',
+    name: 'BERA Smart Chain Mainnet',
     scanURL: BASE_BSC_SCAN_URLS[ChainId.BSC],
     rpcUrls: BSC_RPC_URLS,
   },
   [ChainId.BSC_TESTNET]: {
-    name: 'SEI Smart Chain Testnet',
+    name: 'BERA Smart Chain Testnet',
     scanURL: BASE_BSC_SCAN_URLS[ChainId.BSC_TESTNET],
     rpcUrls: BSC_TESTNET_RPC_URLS,
   },
@@ -46,7 +46,7 @@ export const setupNetwork = async (chainId?: number, externalProvider?: External
                 chainId: `0x${chainId.toString(16)}`,
                 chainName: NETWORK_CONFIG[chainId].name,
                 nativeCurrency: {
-                  name: 'SEI',
+                  name: 'BERA',
                   symbol: 'bnb',
                   decimals: 18,
                 },

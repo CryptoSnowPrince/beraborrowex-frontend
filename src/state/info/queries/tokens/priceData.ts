@@ -68,17 +68,17 @@ const fetchTokenPriceData = async (
       }
     }
 
-    // format token SEI price results
+    // format token BERA price results
     const tokenPrices: {
       timestamp: string
       derivedBNB: number
       priceUSD: number
     }[] = []
 
-    // Get Token prices in SEI
+    // Get Token prices in BERA
     Object.keys(prices).forEach((priceKey) => {
       const timestamp = priceKey.split('t')[1]
-      // if its SEI price e.g. `b123` split('t')[1] will be undefined and skip SEI price entry
+      // if its BERA price e.g. `b123` split('t')[1] will be undefined and skip BERA price entry
       if (timestamp) {
         tokenPrices.push({
           timestamp,
@@ -88,7 +88,7 @@ const fetchTokenPriceData = async (
       }
     })
 
-    // Go through SEI USD prices and calculate Token price based on it
+    // Go through BERA USD prices and calculate Token price based on it
     Object.keys(prices).forEach((priceKey) => {
       const timestamp = priceKey.split('b')[1]
       // if its Token price e.g. `t123` split('b')[1] will be undefined and skip Token price entry

@@ -325,8 +325,8 @@ export enum PredictionStatus {
 }
 
 export enum PredictionSupportedSymbol {
-  SEI = 'SEI',
-  FLUIDEX = 'FLUIDEX',
+  BERA = 'BERA',
+  POOLEN = 'POOLEN',
 }
 
 export enum PredictionsChartView {
