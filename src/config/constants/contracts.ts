@@ -77,7 +77,7 @@ export default {
     80085: '0x18B2A687610328590Bc8F2e5fEdDe3b582A49cdA', // TODO
     97: '',
   },
-  predictionsPOOLEN: {
+  predictionsPOLLEN: {
     80085: '0x0E3A8078EDD2021dadcdE733C6b4a86E51EE8f07', // TODO
     97: '',
   },

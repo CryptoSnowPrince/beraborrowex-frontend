@@ -16,17 +16,17 @@ const PredictionConfigProviders = ({ children }) => {
   const [selectedToken, setConfig] = useState(() => {
     const initToken = localStorage?.getItem(PREDICTION_TOKEN_KEY) as PredictionSupportedSymbol
 
-    if ([PredictionSupportedSymbol.BERA, PredictionSupportedSymbol.POOLEN].includes(initToken)) {
+    if ([PredictionSupportedSymbol.BERA, PredictionSupportedSymbol.POLLEN].includes(initToken)) {
       return initToken
     }
 
-    return PredictionSupportedSymbol.POOLEN
+    return PredictionSupportedSymbol.POLLEN
   })
 
   useEffect(() => {
     const upperToken = _toUpper(token as string) as PredictionSupportedSymbol
 
-    if ([PredictionSupportedSymbol.BERA, PredictionSupportedSymbol.POOLEN].includes(upperToken)) {
+    if ([PredictionSupportedSymbol.BERA, PredictionSupportedSymbol.POLLEN].includes(upperToken)) {
       setConfig(upperToken)
       localStorage?.setItem(PREDICTION_TOKEN_KEY, upperToken)
     }

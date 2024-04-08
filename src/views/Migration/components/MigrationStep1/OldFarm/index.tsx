@@ -57,7 +57,7 @@ const OldFarmStep1: React.FC<React.PropsWithChildren> = () => {
   }, [stakedOrHasTokenBalance, farmsList])
 
   const rowData = chosenFarmsMemoized.map((farm) => {
-    const lpLabel = farm.lpSymbol && farm.lpSymbol.split(' ')[0].toUpperCase().replace('POOLEN', '')
+    const lpLabel = farm.lpSymbol && farm.lpSymbol.split(' ')[0].toUpperCase().replace('POLLEN', '')
 
     const row: RowProps = {
       farm: {

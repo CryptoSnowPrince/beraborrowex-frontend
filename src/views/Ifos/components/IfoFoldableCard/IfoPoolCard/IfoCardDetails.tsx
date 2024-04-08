@@ -60,33 +60,33 @@ const MaxTokenEntry = ({ maxToken, ifo, poolId }: { maxToken: number; ifo: Ifo; 
   const basicTooltipContent =
     ifo.version >= 3.1
       ? t(
-          'For the private sale, each eligible participant will be able to commit any amount of POOLEN up to the maximum commit limit, which is published along with the IFO voting proposal.',
+          'For the private sale, each eligible participant will be able to commit any amount of POLLEN up to the maximum commit limit, which is published along with the IFO voting proposal.',
         )
       : t(
-          'For the basic sale, Max POOLEN entry is capped by minimum between your average POOLEN balance in the iBERABORROWEX, or the pool’s hard cap. To increase the max entry, Stake more POOLEN into the iBERABORROWEX',
+          'For the basic sale, Max POLLEN entry is capped by minimum between your average POLLEN balance in the iBERABORROWEX, or the pool’s hard cap. To increase the max entry, Stake more POLLEN into the iBERABORROWEX',
         )
 
   const unlimitedToolipContent =
     ifo.version >= 3.1 ? (
       <Box>
-        <Text display="inline">{t('For the public sale, Max POOLEN entry is capped by')} </Text>
+        <Text display="inline">{t('For the public sale, Max POLLEN entry is capped by')} </Text>
         <Text bold display="inline">
           {t('the number of iBERABORROWEX.')}{' '}
         </Text>
         <Text display="inline">
-          {t('Lock more POOLEN for longer durations to increase the maximum number of POOLEN you can commit to the sale.')}
+          {t('Lock more POLLEN for longer durations to increase the maximum number of POLLEN you can commit to the sale.')}
         </Text>
       </Box>
     ) : (
       t(
-        'For the unlimited sale, Max POOLEN entry is capped by your average POOLEN balance in the iCake. To increase the max entry, Stake more POOLEN into the iCake',
+        'For the unlimited sale, Max POLLEN entry is capped by your average POLLEN balance in the iCake. To increase the max entry, Stake more POLLEN into the iCake',
       )
     )
 
   const tooltipContent = poolId === PoolIds.poolBasic ? basicTooltipContent : unlimitedToolipContent
 
   const { targetRef, tooltip, tooltipVisible } = useTooltip(tooltipContent, { placement: 'bottom-start' })
-  const label = isCurrencyCake ? t('Max. POOLEN entry') : t('Max. token entry')
+  const label = isCurrencyCake ? t('Max. POLLEN entry') : t('Max. token entry')
   const price = useBUSDPrice(ifo.currency)
 
   const dollarValueOfToken = multiplyPriceByAmount(price, maxToken, ifo.currency.decimals)
@@ -183,7 +183,7 @@ const IfoCardDetails: React.FC<React.PropsWithChildren<IfoCardDetailsProps>> = (
         <>
           {tokenEntry}
           <FooterEntry label={t('Funds to raise:')} value={ifo[poolId].raiseAmount} />
-          {ifo[poolId].cakeToBurn !== '$0' && <FooterEntry label={t('POOLEN to burn:')} value={ifo[poolId].cakeToBurn} />}
+          {ifo[poolId].cakeToBurn !== '$0' && <FooterEntry label={t('POLLEN to burn:')} value={ifo[poolId].cakeToBurn} />}
           <FooterEntry
             label={t('Price per %symbol%:', { symbol: ifo.token.symbol })}
             value={`$${ifo.tokenOfferingPrice}`}
@@ -244,7 +244,7 @@ const IfoCardDetails: React.FC<React.PropsWithChildren<IfoCardDetailsProps>> = (
           {poolId === PoolIds.poolUnlimited && <FooterEntry label={t('Additional fee:')} value={taxRate} />}
           <FooterEntry label={t('Total committed:')} value={currencyPriceInUSD.gt(0) ? totalCommitted : null} />
           <FooterEntry label={t('Funds to raise:')} value={ifo[poolId].raiseAmount} />
-          {ifo[poolId].cakeToBurn !== '$0' && <FooterEntry label={t('POOLEN to burn:')} value={ifo[poolId].cakeToBurn} />}
+          {ifo[poolId].cakeToBurn !== '$0' && <FooterEntry label={t('POLLEN to burn:')} value={ifo[poolId].cakeToBurn} />}
           {ifo.version > 1 && (
             <FooterEntry
               label={t('Price per %symbol%:', { symbol: ifo.token.symbol })}

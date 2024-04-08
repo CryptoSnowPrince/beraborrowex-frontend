@@ -3,7 +3,7 @@ import { bscTokens } from './tokens'
 import { BERABORROWEX_BNB_LP_MAINNET } from './farms'
 import { Ifo } from './types'
 
-export const cakeBnbLpToken = new Token(ChainId.BSC, BERABORROWEX_BNB_LP_MAINNET, 18, 'POOLEN-BERA LP')
+export const cakeBnbLpToken = new Token(ChainId.BSC, BERABORROWEX_BNB_LP_MAINNET, 18, 'POLLEN-BERA LP')
 
 const ifos: Ifo[] = [
   {

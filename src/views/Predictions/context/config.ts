@@ -1,6 +1,6 @@
 import addresses from 'config/constants/contracts'
 
-import { GRAPH_API_PREDICTION_POOLEN, GRAPH_API_PREDICTION_BNB } from 'config/constants/endpoints'
+import { GRAPH_API_PREDICTION_POLLEN, GRAPH_API_PREDICTION_BNB } from 'config/constants/endpoints'
 import { getAddress } from 'utils/addressHelpers'
 import { bscTokens } from 'config/constants/tokens'
 import { BigNumber } from '@ethersproject/bignumber'
@@ -15,9 +15,9 @@ export default {
     minPriceUsdDisplayed: DEFAULT_MIN_PRICE_USD_DISPLAYED,
     token: bscTokens.bnb,
   },
-  POOLEN: {
-    address: getAddress(addresses.predictionsPOOLEN),
-    api: GRAPH_API_PREDICTION_POOLEN,
+  POLLEN: {
+    address: getAddress(addresses.predictionsPOLLEN),
+    api: GRAPH_API_PREDICTION_POLLEN,
     chainlinkOracleAddress: getAddress(addresses.chainlinkOracleBERABORROWEX),
     minPriceUsdDisplayed: DEFAULT_MIN_PRICE_USD_DISPLAYED,
     token: bscTokens.cake,

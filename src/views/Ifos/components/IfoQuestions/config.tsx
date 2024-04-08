@@ -13,11 +13,11 @@ const config = [
       <Trans>
         In the current IFO format. There is a brand new Private Sale. To participate, participants will have to meet
         certain requirements presented on the IFO card. Each eligible participant will be able to commit any amount of
-        POOLEN up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has
+        POLLEN up to the maximum commit limit, which is published along with the IFO voting proposal. The Private Sale has
         no participation fee.
       </Trans>,
       <Trans>
-        In the Public Sale, everyone with an active Beraborrowex profile can commit. However the maximum amount of POOLEN
+        In the Public Sale, everyone with an active Beraborrowex profile can commit. However the maximum amount of POLLEN
         users can commit, is equal to the number of iBERABORROWEX they have.
       </Trans>,
       <>
@@ -56,12 +56,12 @@ const config = [
   },
   {
     title: <Trans>Where does the participation fee go?</Trans>,
-    description: [<Trans>The POOLEN from the participation fee will be burnt as part of the weekly token burn.</Trans>],
+    description: [<Trans>The POLLEN from the participation fee will be burnt as part of the weekly token burn.</Trans>],
   },
   {
     title: <Trans>How can I get an achievement for participating in the IFO?</Trans>,
     description: [
-      <Trans>You need to contribute a minimum of about 10 USD worth of POOLEN to either sale.</Trans>,
+      <Trans>You need to contribute a minimum of about 10 USD worth of POLLEN to either sale.</Trans>,
       <Trans>
         You can contribute to one or both, it doesn’t matter: only your overall contribution is counted for the
         achievement.

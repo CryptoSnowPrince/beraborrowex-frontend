@@ -4,8 +4,8 @@ const BERABORROWEX_MAINNET = new Token(
   ChainId.BSC,
   '0x005f7bE7C9C9Ae25028fa2aBCEb729b562dd564d',
   18,
-  'POOLEN',
-  'POOLEN',
+  'POLLEN',
+  'POLLEN',
   'https://beraborrow.com/',
 )
 
@@ -13,8 +13,8 @@ const BERABORROWEX_TESTNET = new Token(
   ChainId.BSC_TESTNET,
   '0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe',
   18,
-  'POOLEN',
-  'POOLEN',
+  'POLLEN',
+  'POLLEN',
   'https://beraborrow.com/',
 )
 
@@ -41,7 +41,7 @@ export const USDC = {
   [ChainId.BSC_TESTNET]: USDC_TESTNET,
 }
 
-export const POOLEN = {
+export const POLLEN = {
   [ChainId.BSC]: BERABORROWEX_MAINNET,
   [ChainId.BSC_TESTNET]: BERABORROWEX_TESTNET,
 }

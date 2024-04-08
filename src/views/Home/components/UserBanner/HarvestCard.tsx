@@ -46,7 +46,7 @@ const HarvestCard = () => {
         toastSuccess(
           `${t('Harvested')}!`,
           <ToastDescriptionWithTx txHash={receipt.transactionHash}>
-            {t('Your %symbol% earnings have been sent to your wallet!', { symbol: 'POOLEN' })}
+            {t('Your %symbol% earnings have been sent to your wallet!', { symbol: 'POLLEN' })}
           </ToastDescriptionWithTx>,
         )
       }

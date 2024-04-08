@@ -60,11 +60,11 @@ const RoiCalculatorFooter: React.FC<React.PropsWithChildren<RoiCalculatorFooterP
     <>
       <Text>
         {t(
-          'The Multiplier represents the proportion of POOLEN rewards each farm receives, as a proportion of the POOLEN produced each block.',
+          'The Multiplier represents the proportion of POLLEN rewards each farm receives, as a proportion of the POLLEN produced each block.',
         )}
       </Text>
       <Text my="24px">
-        {t('For example, if a 1x farm received 1 POOLEN per block, a 40x farm would receive 40 POOLEN per block.')}
+        {t('For example, if a 1x farm received 1 POLLEN per block, a 40x farm would receive 40 POLLEN per block.')}
       </Text>
       <Text>{t('This amount is already included in all APR calculations for the farm.')}</Text>
     </>,
@@ -94,7 +94,7 @@ const RoiCalculatorFooter: React.FC<React.PropsWithChildren<RoiCalculatorFooterP
             )}
             {!Number.isFinite(apy) ? (
               <Text color="textSubtle" small>
-                *{isFarm ? t('Base APR (POOLEN yield only)') : t('APR')}
+                *{isFarm ? t('Base APR (POLLEN yield only)') : t('APR')}
               </Text>
             ) : (
               <Text color="textSubtle" small>

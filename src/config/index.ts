@@ -15,12 +15,12 @@ export const BASE_BSC_SCAN_URLS = {
 }
 
 // BERABORROWEX_PER_BLOCK details
-// 40 POOLEN is minted per block
-// 20 POOLEN per block is sent to Burn pool (A farm just for burning cake)
-// 10 POOLEN per block goes to POOLEN syrup pool
-// 9 POOLEN per block goes to Yield farms and lottery
+// 40 POLLEN is minted per block
+// 20 POLLEN per block is sent to Burn pool (A farm just for burning cake)
+// 10 POLLEN per block goes to POLLEN syrup pool
+// 9 POLLEN per block goes to Yield farms and lottery
 // BERABORROWEX_PER_BLOCK in config/index.ts = 40 as we only change the amount sent to the burn pool which is effectively a farm.
-// POOLEN/Block in src/views/Home/components/CakeDataRow.tsx = 15 (40 - Amount sent to burn pool)
+// POLLEN/Block in src/views/Home/components/CakeDataRow.tsx = 15 (40 - Amount sent to burn pool)
 export const BERABORROWEX_PER_BLOCK = 40
 export const BLOCKS_PER_YEAR = (60 / BSC_BLOCK_TIME) * 60 * 24 * 365 // 10512000
 export const BERABORROWEX_PER_YEAR = BERABORROWEX_PER_BLOCK * BLOCKS_PER_YEAR

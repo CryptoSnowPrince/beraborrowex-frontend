@@ -13,7 +13,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 0,
     v1pid: 0,
-    lpSymbol: 'POOLEN',
+    lpSymbol: 'POLLEN',
     lpAddresses: {
       97: '0x005f7bE7C9C9Ae25028fa2aBCEb729b562dd564d',
       80085: '0x005f7bE7C9C9Ae25028fa2aBCEb729b562dd564d', // TODO
@@ -24,7 +24,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 2,
     v1pid: 251,
-    lpSymbol: 'POOLEN-BERA LP',
+    lpSymbol: 'POLLEN-BERA LP',
     lpAddresses: {
       97: '0x3ed8936cAFDF85cfDBa29Fbe5940A5b0524824F4',
       80085: BERABORROWEX_BNB_LP_MAINNET, // TODO
@@ -98,7 +98,7 @@ const farms: SerializedFarmConfig[] = [
   },
   {
     pid: 111,
-    lpSymbol: 'AOG-POOLEN LP',
+    lpSymbol: 'AOG-POLLEN LP',
     lpAddresses: {
       80085: '0xF8cA29a3BF6d34691981D3Ee8D4c9Cd1C437EfeE', // TODO
       97: '',
@@ -358,7 +358,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 88,
     v1pid: 518,
-    lpSymbol: 'FROYO-POOLEN LP',
+    lpSymbol: 'FROYO-POLLEN LP',
     lpAddresses: {
       97: '',
       80085: '0x1CCc3cC95c8148477Afd18a552f03835Be9D182a', // TODO
@@ -380,7 +380,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 86,
     v1pid: 515,
-    lpSymbol: 'DUET-POOLEN LP',
+    lpSymbol: 'DUET-POLLEN LP',
     lpAddresses: {
       97: '',
       80085: '0xbDF0aA1D1985Caa357A6aC6661D838DA8691c569', // TODO
@@ -798,7 +798,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 47,
     v1pid: 422,
-    lpSymbol: 'POOLEN-USDT LP',
+    lpSymbol: 'POLLEN-USDT LP',
     lpAddresses: {
       97: '',
       80085: '0xA39Af17CE4a8eb807E076805Da1e2B8EA7D0755b', // TODO
@@ -875,7 +875,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 39,
     v1pid: 389,
-    lpSymbol: 'POOLEN-BUSD LP',
+    lpSymbol: 'POLLEN-BUSD LP',
     lpAddresses: {
       97: '0x25293964dcaFd8a6cDf97AFF8b6559FD4A5Af864',
       80085: '0x804678fa97d91B974ec2af3c843270886528a9E6', // TODO

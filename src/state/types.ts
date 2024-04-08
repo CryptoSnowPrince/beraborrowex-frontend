@@ -326,7 +326,7 @@ export enum PredictionStatus {
 
 export enum PredictionSupportedSymbol {
   BERA = 'BERA',
-  POOLEN = 'POOLEN',
+  POLLEN = 'POLLEN',
 }
 
 export enum PredictionsChartView {

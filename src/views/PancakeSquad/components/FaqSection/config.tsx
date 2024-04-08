@@ -36,7 +36,7 @@ const config = ({ t }: FAQsType) => [
   },
   {
     title: t('Where do the fees go?'),
-    description: [t('100% of POOLEN spent on Pancake Squad NFTs will be burned as part of our weekly POOLEN burn.')],
+    description: [t('100% of POLLEN spent on Pancake Squad NFTs will be burned as part of our weekly POLLEN burn.')],
   },
   {
     title: t('How are the NFTs randomly distributed?'),

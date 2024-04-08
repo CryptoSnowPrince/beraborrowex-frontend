@@ -57,10 +57,10 @@ const Notification: React.FC<React.PropsWithChildren<NotificationProps>> = ({ ti
         <BackButton />
         <BunnyDecoration
           onClick={() => {
-            if (token.symbol === PredictionSupportedSymbol.POOLEN) {
+            if (token.symbol === PredictionSupportedSymbol.POLLEN) {
               router.query.token = PredictionSupportedSymbol.BERA
             } else if (token.symbol === PredictionSupportedSymbol.BERA) {
-              router.query.token = PredictionSupportedSymbol.POOLEN
+              router.query.token = PredictionSupportedSymbol.POLLEN
             }
 
             router.push(router)

@@ -6,7 +6,7 @@ import { useTranslation } from '@pancakeswap/localization'
 import BigNumber from 'bignumber.js'
 import { usePotteryData, useLatestVaultAddress } from 'state/pottery/hook'
 import { Input as NumericalInput } from 'components/CurrencyInputPanel/NumericalInput'
-import { POOLEN } from 'config/constants/tokens'
+import { POLLEN } from 'config/constants/tokens'
 import useTokenBalance from 'hooks/useTokenBalance'
 import { getFullDisplayBalance, getBalanceNumber } from 'utils/formatBalance'
 import { PotteryDepositStatus } from 'state/types'
@@ -45,13 +45,13 @@ const DepositAction: React.FC<React.PropsWithChildren<DepositActionProps>> = ({ 
   const maxTotalDepositToNumber = getBalanceNumber(publicData.maxTotalDeposit)
   const remainingCakeCanStake = new BigNumber(maxTotalDepositToNumber).minus(totalValueLockedValue).toString()
 
-  const { balance: userCake } = useTokenBalance(POOLEN[chainId]?.address)
+  const { balance: userCake } = useTokenBalance(POLLEN[chainId]?.address)
   const userCakeDisplayBalance = getFullDisplayBalance(userCake, 18, 3)
   const { userNotEnoughCake, notEnoughErrorMessage } = useUserEnoughCakeValidator(depositAmount, userCake)
 
   const { targetRef, tooltip, tooltipVisible } = useTooltip(
     t(
-      'POOLEN deposit will be diverted to the fixed-term staking pool. Please note that POOLEN deposited can ONLY be withdrawn after 10 weeks.',
+      'POLLEN deposit will be diverted to the fixed-term staking pool. Please note that POLLEN deposited can ONLY be withdrawn after 10 weeks.',
     ),
     {
       placement: 'bottom',
@@ -112,7 +112,7 @@ const DepositAction: React.FC<React.PropsWithChildren<DepositActionProps>> = ({ 
           {t('Deposit')}
         </Text>
         <Text fontSize="12px" ml="4px" color="textSubtle" bold as="span">
-          POOLEN
+          POLLEN
         </Text>
       </Box>
       <InputPanel>
@@ -134,20 +134,20 @@ const DepositAction: React.FC<React.PropsWithChildren<DepositActionProps>> = ({ 
                 </Button>
               )}
               <LogoRoundIcon m="0 4px" width="24px" height="24px" />
-              <Text>POOLEN</Text>
+              <Text>POLLEN</Text>
             </Flex>
           </Flex>
         </Container>
         {isLessThanOneCake && (
           <Text color="failure" fontSize="14px" textAlign="right">
-            {t('Please deposit at least 1 POOLEN to participate in the Pottery')}
+            {t('Please deposit at least 1 POLLEN to participate in the Pottery')}
           </Text>
         )}
       </InputPanel>
       <Flex>
         <Flex ml="auto">
           <Text fontSize="12px" color="textSubtle">
-            {t('Deposited POOLEN will be locked for 10 weeks')}
+            {t('Deposited POLLEN will be locked for 10 weeks')}
           </Text>
           <Flex ref={targetRef}>
             {tooltipVisible && tooltip}

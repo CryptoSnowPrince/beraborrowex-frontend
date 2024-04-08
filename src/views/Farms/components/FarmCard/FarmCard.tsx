@@ -60,8 +60,8 @@ const FarmCard: React.FC<React.PropsWithChildren<FarmCardProps>> = ({
       ? `$${farm.liquidity.toNumber().toLocaleString(undefined, { maximumFractionDigits: 0 })}`
       : ''
 
-  const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('POOLEN', '')
-  const earnLabel = farm.dual ? farm.dual.earnLabel : t('POOLEN + Fees')
+  const lpLabel = farm.lpSymbol && farm.lpSymbol.toUpperCase().replace('POLLEN', '')
+  const earnLabel = farm.dual ? farm.dual.earnLabel : t('POLLEN + Fees')
 
   const liquidityUrlPathParts = getLiquidityUrlPathParts({
     quoteTokenAddress: farm.quoteToken.address,
@@ -69,7 +69,7 @@ const FarmCard: React.FC<React.PropsWithChildren<FarmCardProps>> = ({
   })
   const addLiquidityUrl = `${BASE_ADD_LIQUIDITY_URL}/${liquidityUrlPathParts}`
   const lpAddress = getAddress(farm.lpAddresses)
-  const isPromotedFarm = farm.token.symbol === 'POOLEN'
+  const isPromotedFarm = farm.token.symbol === 'POLLEN'
 
   const toggleExpandableSection = useCallback(() => {
     setShowExpandableSection((prev) => !prev)

@@ -71,10 +71,10 @@ const LotteryCardData: IconCardData = {
 const bottomLeftImage = {
   path: '/images/home/prediction-cards/',
   attributes: [
-    { src: 'bottom-left', alt: 'POOLEN card' },
-    { src: 'green', alt: 'Green POOLEN card with up arrow' },
+    { src: 'bottom-left', alt: 'POLLEN card' },
+    { src: 'green', alt: 'Green POLLEN card with up arrow' },
     { src: 'red', alt: 'Red Cake card with down arrow' },
-    { src: 'top-right', alt: 'POOLEN card' },
+    { src: 'top-right', alt: 'POLLEN card' },
   ],
 }
 

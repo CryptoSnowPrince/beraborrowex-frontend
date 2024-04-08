@@ -52,7 +52,7 @@ const AutoHarvestAction: React.FunctionComponent<React.PropsWithChildren<Deseria
 
   const actionTitle = (
     <Text fontSize="12px" bold color="secondary" as="span" textTransform="uppercase">
-      {t('Recent POOLEN profit')}
+      {t('Recent POLLEN profit')}
     </Text>
   )
 

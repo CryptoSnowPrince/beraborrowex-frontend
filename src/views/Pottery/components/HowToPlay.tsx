@@ -48,23 +48,23 @@ const HowToPlay: React.FC<React.PropsWithChildren> = () => {
   const steps: Step[] = [
     {
       label: t('Step %number%', { number: 1 }),
-      title: t('Deposit POOLEN'),
+      title: t('Deposit POLLEN'),
       subtitle: t(
-        'Deposit POOLEN on the monthly subscription date -- first Monday of each Month. Your chance of winning depends on how many POOLEN you deposit compared to the total pool. Your POOLEN deposit will be locked for 10 weeks. There will be a monthly TVL cap in the beta product stage.',
+        'Deposit POLLEN on the monthly subscription date -- first Monday of each Month. Your chance of winning depends on how many POLLEN you deposit compared to the total pool. Your POLLEN deposit will be locked for 10 weeks. There will be a monthly TVL cap in the beta product stage.',
       ),
     },
     {
       label: t('Step %number%', { number: 2 }),
       title: t('Wait for the Draw'),
       subtitle: t(
-        'A portion of the staking rewards from the POOLEN deposited will fill the prize pot and there will be one weekly draw. There will be eight (8) winners each week. Check your chance of winning, add more POOLEN on the monthly subscription date to increase your odds!',
+        'A portion of the staking rewards from the POLLEN deposited will fill the prize pot and there will be one weekly draw. There will be eight (8) winners each week. Check your chance of winning, add more POLLEN on the monthly subscription date to increase your odds!',
       ),
     },
     {
       label: t('Step %number%', { number: 3 }),
       title: t('Claim & Withdrawal'),
       subtitle: t(
-        "You can claim any winnings that you may have once the weekly draw is completed. Your POOLEN can be withdrawn after 10 weeks but they won't be providing any winning odds anymore.",
+        "You can claim any winnings that you may have once the weekly draw is completed. Your POLLEN can be withdrawn after 10 weeks but they won't be providing any winning odds anymore.",
       ),
     },
   ]
@@ -76,7 +76,7 @@ const HowToPlay: React.FC<React.PropsWithChildren> = () => {
       </Text>
       <Text textAlign="center">
         {t(
-          'Deposit POOLEN to get your Pottery tickets. More POOLEN deposited, higher the chance of winning (and of course, higher the rewards)!',
+          'Deposit POLLEN to get your Pottery tickets. More POLLEN deposited, higher the chance of winning (and of course, higher the rewards)!',
         )}
       </Text>
       <Text mb="40px">{t('Simple!')}</Text>

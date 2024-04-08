@@ -27,7 +27,7 @@ const EasterPrizesCard = () => {
       <Box p="24px">
         <Text color="textSubtle" fontSize="14px">
           {t(
-            'Prizes to be distributed in POOLEN and shared by all members of a tier. POOLEN price in USD to be determined on the day of distribution. Details below.',
+            'Prizes to be distributed in POLLEN and shared by all members of a tier. POLLEN price in USD to be determined on the day of distribution. Details below.',
           )}
         </Text>
       </Box>

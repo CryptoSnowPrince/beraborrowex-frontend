@@ -74,7 +74,7 @@ export const INPUT_FRACTION_AFTER_FEE = ONE_HUNDRED_PERCENT.subtract(BASE_FEE)
 
 // BERA
 export const DEFAULT_INPUT_CURRENCY = 'BERA'
-// POOLEN
+// POLLEN
 export const DEFAULT_OUTPUT_CURRENCY = '0x005f7bE7C9C9Ae25028fa2aBCEb729b562dd564d'
 
 // Handler string is passed to Gelato to use PCS router

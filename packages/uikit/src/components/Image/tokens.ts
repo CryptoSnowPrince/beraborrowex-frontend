@@ -3,7 +3,7 @@
  */
 const tokens = {
   cake: {
-    symbol: "POOLEN",
+    symbol: "POLLEN",
     address: {
       56: "0x005f7bE7C9C9Ae25028fa2aBCEb729b562dd564d",
       97: "0xa35062141Fa33BCA92Ce69FeD37D0E8908868AAe",

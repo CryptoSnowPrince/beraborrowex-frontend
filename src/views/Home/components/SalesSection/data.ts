@@ -20,7 +20,7 @@ export const swapSectionData = (t: TranslateFunction): SalesSectionProps => ({
     attributes: [
       { src: 'BERA', alt: t('BERA token') },
       { src: 'BTC', alt: t('BTC token') },
-      { src: 'POOLEN', alt: t('POOLEN token') },
+      { src: 'POLLEN', alt: t('POLLEN token') },
     ],
   },
 })
@@ -50,14 +50,14 @@ export const earnSectionData = (t: TranslateFunction): SalesSectionProps => ({
 })
 
 export const cakeSectionData = (t: TranslateFunction): SalesSectionProps => ({
-  headingText: t('POOLEN makes our world go round.'),
+  headingText: t('POLLEN makes our world go round.'),
   bodyText: t(
-    'POOLEN token is at the heart of the Beraborrowex ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!',
+    'POLLEN token is at the heart of the Beraborrowex ecosystem. Buy it, win it, farm it, spend it, stake it... heck, you can even vote with it!',
   ),
   reverse: false,
   primaryButton: {
     to: '/swap?outputCurrency=0x005f7bE7C9C9Ae25028fa2aBCEb729b562dd564d',
-    text: t('Buy POOLEN'),
+    text: t('Buy POLLEN'),
     external: false,
   },
   secondaryButton: {
@@ -71,7 +71,7 @@ export const cakeSectionData = (t: TranslateFunction): SalesSectionProps => ({
     attributes: [
       { src: 'bottom-right', alt: t('Small 3d pancake') },
       { src: 'top-right', alt: t('Small 3d pancake') },
-      { src: 'coin', alt: t('POOLEN token') },
+      { src: 'coin', alt: t('POLLEN token') },
       { src: 'top-left', alt: t('Small 3d pancake') },
     ],
   },

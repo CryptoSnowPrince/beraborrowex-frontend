@@ -129,7 +129,7 @@ const IfoCardTokens: React.FC<React.PropsWithChildren<IfoCardTokensProps>> = ({
   const { t } = useTranslation()
   const { targetRef, tooltip, tooltipVisible } = useTooltip(
     t(
-      'Sorry, you didn’t contribute enough POOLEN to meet the minimum threshold. You didn’t buy anything in this sale, but you can still reclaim your POOLEN.',
+      'Sorry, you didn’t contribute enough POLLEN to meet the minimum threshold. You didn’t buy anything in this sale, but you can still reclaim your POLLEN.',
     ),
     { placement: 'bottom' },
   )
@@ -281,7 +281,7 @@ const IfoCardTokens: React.FC<React.PropsWithChildren<IfoCardTokensProps>> = ({
           {ifov31Msg || (
             <>
               <Text textAlign="center" fontSize="14px">
-                {t('To participate in the next IFO, lock some POOLEN in the fixed-term staking POOLEN pool!')}
+                {t('To participate in the next IFO, lock some POLLEN in the fixed-term staking POLLEN pool!')}
               </Text>
               <MessageTextLink href="/ifo#ifo-how-to" textAlign="center">
                 {t('How does it work?')} »

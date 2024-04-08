@@ -65,8 +65,8 @@ function MyApp(props: AppProps) {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=5, minimum-scale=1, viewport-fit=cover"
         />
-        <meta name="description" content="Discover Beraborrowex, the leading DEX on BERA Chain (BERA) for POOLEN." />
-        <meta name="theme-color" content="#1FC7D4" />
+        <meta name="description" content="Discover Beraborrowex, the leading DEX on BERA Chain (BERA) for POLLEN." />
+        <meta name="theme-color" content="#e05923" />
         <meta name="twitter:image" content="https://beraborrowex.metabest.tech/logo.png" />
         <meta name="twitter:description" content="The most popular AMM on BERA!" />
         <meta name="twitter:card" content="summary_large_image" />

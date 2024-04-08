@@ -1,5 +1,5 @@
 import { request, gql } from 'graphql-request'
-import { GRAPH_API_PREDICTION_BNB, GRAPH_API_PREDICTION_POOLEN } from 'config/constants/endpoints'
+import { GRAPH_API_PREDICTION_BNB, GRAPH_API_PREDICTION_POLLEN } from 'config/constants/endpoints'
 import { BigNumber } from '@ethersproject/bignumber'
 import {
   Bet,
@@ -34,10 +34,10 @@ export enum Result {
 }
 
 export const transformBetResponse = (tokenSymbol) =>
-  tokenSymbol === 'POOLEN' ? transformBetResponseBERABORROWEX : transformBetResponseBNB
+  tokenSymbol === 'POLLEN' ? transformBetResponseBERABORROWEX : transformBetResponseBNB
 
 export const transformUserResponse = (tokenSymbol) =>
-  tokenSymbol === 'POOLEN' ? transformUserResponseBERABORROWEX : transformUserResponseBNB
+  tokenSymbol === 'POLLEN' ? transformUserResponseBERABORROWEX : transformUserResponseBNB
 
 export const getRoundResult = (bet: Bet, currentEpoch: number): Result => {
   const { round } = bet
@@ -93,7 +93,7 @@ export const getTotalWon = async (): Promise<{ totalWonBNB: number; totalWonBERA
       `,
     ),
     request(
-      GRAPH_API_PREDICTION_POOLEN,
+      GRAPH_API_PREDICTION_POLLEN,
       gql`
         query getTotalWonData {
           market(id: 1) {
@@ -106,7 +106,7 @@ export const getTotalWon = async (): Promise<{ totalWonBNB: number; totalWonBERA
   ])
 
   const totalWonBNB = getTotalWonMarket(BNBMarket, 'BERA')
-  const totalWonBERABORROWEX = getTotalWonMarket(BERABORROWEXMarket, 'POOLEN')
+  const totalWonBERABORROWEX = getTotalWonMarket(BERABORROWEXMarket, 'POLLEN')
 
   return { totalWonBNB, totalWonBERABORROWEX }
 }

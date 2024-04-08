@@ -90,12 +90,12 @@ const Step1 = ({ hasProfile }: { hasProfile: boolean }) => {
     <CardBody>
       {tooltipVisible && tooltip}
       <Heading as="h4" color="secondary" mb="16px">
-        {t('Lock POOLEN in the POOLEN pool')}
+        {t('Lock POLLEN in the POLLEN pool')}
       </Heading>
       <Box>
         <Text mb="4px" color="textSubtle" small>
           {t(
-            'The maximum amount of POOLEN you can commit to the Public Sale equals the number of your iBERABORROWEX. Lock more POOLEN for longer durations to increase the maximum POOLEN you can commit to the sale.',
+            'The maximum amount of POLLEN you can commit to the Public Sale equals the number of your iBERABORROWEX. Lock more POLLEN for longer durations to increase the maximum POLLEN you can commit to the sale.',
           )}
         </Text>
         <TooltipText as="span" fontWeight={700} ref={targetRef} color="textSubtle" small>
@@ -114,7 +114,7 @@ const Step1 = ({ hasProfile }: { hasProfile: boolean }) => {
               <LogoRoundIcon style={{ alignSelf: 'flex-start' }} width={32} height={32} />
               <Box ml="16px">
                 <Text bold fontSize="12px" textTransform="uppercase" color="secondary">
-                  {t('Your max POOLEN entry')}
+                  {t('Your max POLLEN entry')}
                 </Text>
                 <Balance fontSize="20px" bold decimals={5} value={getBalanceNumber(credit)} />
                 <Text fontSize="12px" color="textSubtle">
@@ -145,17 +145,17 @@ const Step2 = ({ hasProfile, isLive, isCommitted }: { hasProfile: boolean; isLiv
   return (
     <CardBody>
       <Heading as="h4" color="secondary" mb="16px">
-        {t('Commit POOLEN')}
+        {t('Commit POLLEN')}
       </Heading>
       <Text color="textSubtle" small>
         {t(
-          'Please note that POOLEN in the fixed-term staking positions will remain locked and can not be used for committing to IFO sales. You will need a separate amount of POOLEN in your wallet balance to commit to the IFO sales.',
+          'Please note that POLLEN in the fixed-term staking positions will remain locked and can not be used for committing to IFO sales. You will need a separate amount of POLLEN in your wallet balance to commit to the IFO sales.',
         )}{' '}
         <br />
       </Text>
       {hasProfile && isLive && !isCommitted && (
         <Button as="a" href="#current-ifo" mt="16px">
-          {t('Commit POOLEN')}
+          {t('Commit POLLEN')}
         </Button>
       )}
     </CardBody>
@@ -233,7 +233,7 @@ const IfoSteps: React.FC<React.PropsWithChildren<TypeProps>> = ({
             </Heading>
             <Text color="textSubtle" small>
               {t(
-                'After the IFO sales finish, you can claim any IFO tokens that you bought, and any unspent POOLEN tokens will be returned to your wallet.',
+                'After the IFO sales finish, you can claim any IFO tokens that you bought, and any unspent POLLEN tokens will be returned to your wallet.',
               )}
             </Text>
           </CardBody>
